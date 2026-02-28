@@ -51,10 +51,10 @@ export default function Marquee({ items = [], speed = 30, separator = '·', clas
 
     const content = items.map((item, i) => (
         <span key={i} className="inline-flex items-center gap-4 md:gap-8">
-            <span className="font-unbounded text-2xl md:text-4xl lg:text-5xl font-bold whitespace-nowrap uppercase tracking-wider">
+            <span className="font-unbounded text-2xl md:text-4xl lg:text-5xl font-bold whitespace-nowrap uppercase tracking-widest transition-colors duration-500 hover:text-white">
                 {item}
             </span>
-            <span className="text-accent/40 text-xl md:text-3xl select-none">{separator}</span>
+            <span className="text-emerald-400/60 text-xl md:text-3xl select-none">{separator}</span>
         </span>
     ))
 

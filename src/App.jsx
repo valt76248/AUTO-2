@@ -79,14 +79,14 @@ function App() {
 
             <div className={`${loading ? 'opacity-0' : 'opacity-100'} transition-opacity duration-300`}>
                 <Header />
-                <main>
+                <main role="main" aria-label="Основное содержимое сайта Prestige Auto Moscow">
                     <HeroSection car={carsData[0]} loading={loading} />
                     <CatalogSection cars={carsData} onCarSelect={handleCarSelect} />
                     <Marquee
-                        items={['BMW', 'Volvo', 'Dodge', 'Chevrolet', 'Ford', 'Prestige Auto']}
+                        items={['Ferrari', 'BMW', 'Dodge', 'Jeep', 'Chevrolet', 'Ford', 'Nissan', 'Genesis', 'Prestige Auto']}
                         speed={40}
                         separator="✦"
-                        className="bg-[#0A0A0A] text-white/10"
+                        className="bg-[#0A0A0A] text-white/60 border-y border-white/5"
                     />
                     <AboutSection />
                     <ReviewsSection />

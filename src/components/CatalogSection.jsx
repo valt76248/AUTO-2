@@ -198,6 +198,7 @@ export default function CatalogSection({ cars, onCarSelect }) {
             ref={sectionRef}
             id="catalog"
             className="relative bg-background min-h-screen py-24 md:py-32"
+            aria-label="Каталог автомобилей в наличии"
         >
             {/* Section title */}
             <div className="px-6 md:px-12 mb-12 md:mb-16">
@@ -245,7 +246,7 @@ export default function CatalogSection({ cars, onCarSelect }) {
                                 <div className="relative aspect-[4/3] overflow-hidden pointer-events-none">
                                     <img
                                         src={car.heroImage}
-                                        alt={`${car.brand} ${car.model}`}
+                                        alt={`Купить ${car.brand} ${car.model} ${car.year} в Москве — фото`}
                                         className="tilt-img w-full h-full object-cover scale-105 will-change-transform"
                                         loading="lazy"
                                     />

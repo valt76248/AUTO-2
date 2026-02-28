@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gor325678.github.io/AUTO-2/sitemap.xml

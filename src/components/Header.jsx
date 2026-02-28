@@ -40,15 +40,17 @@ export default function Header() {
         <header
             ref={headerRef}
             className="fixed top-0 left-0 right-0 z-50 px-6 md:px-12 py-5"
+            role="banner"
+            aria-label="Главная навигация"
         >
             <div className="max-w-7xl mx-auto flex items-center justify-between">
                 {/* Logo */}
-                <a href="#" className="font-unbounded text-text-primary text-base font-semibold tracking-tight uppercase">
+                <a href="#" className="font-unbounded text-text-primary text-base font-semibold tracking-tight uppercase" aria-label="Prestige Auto Moscow — на главную">
                     Prestige<span className="font-light text-text-secondary ml-1">Auto Moscow</span>
                 </a>
 
                 {/* Nav — desktop */}
-                <nav className="hidden md:flex items-center gap-8">
+                <nav className="hidden md:flex items-center gap-8" aria-label="Основная навигация">
                     <a
                         href="#catalog"
                         className="font-unbounded text-xs tracking-[0.15em] uppercase text-text-secondary hover:text-text-primary transition-colors duration-300"
@@ -74,6 +76,8 @@ export default function Header() {
                     <a
                         href="tel:+70000000000"
                         className="font-unbounded text-xs tracking-[0.1em] uppercase bg-accent text-white px-6 py-3 rounded-full hover:bg-accent-hover transition-colors duration-300"
+                        aria-label="Позвонить в Prestige Auto Moscow"
+                        rel="nofollow"
                     >
                         Позвонить
                     </a>

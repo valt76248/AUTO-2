@@ -94,6 +94,7 @@ export default function AboutSection() {
             ref={sectionRef}
             id="about"
             className="relative bg-surface py-24 md:py-32"
+            aria-label="О компании Prestige Auto Moscow"
         >
             {/* Divider */}
             <div className="section-divider max-w-7xl mx-auto mb-24 md:mb-32" />

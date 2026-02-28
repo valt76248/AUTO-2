@@ -3,11 +3,11 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 const reviews = [
-    { src: 'images/reviews/1.png', alt: 'Отзыв от клиента' },
-    { src: 'images/reviews/2.png', alt: 'Отзыв от клиента' },
-    { src: 'images/reviews/3.png', alt: 'Отзыв от клиента' },
-    { src: 'images/reviews/4.png', alt: 'Отзыв от клиента' },
-    { src: 'images/reviews/5.png', alt: 'Рейтинг и статистика' },
+    { src: 'images/reviews/1.png', alt: 'Отзыв от клиента Prestige Auto Moscow — покупка автомобиля' },
+    { src: 'images/reviews/2.png', alt: 'Отзыв о сервисе и качестве обслуживания Prestige Auto' },
+    { src: 'images/reviews/3.png', alt: 'Положительный отзыв клиента о покупке авто' },
+    { src: 'images/reviews/4.png', alt: 'Отзыв о прозрачности сделки и честности дилера' },
+    { src: 'images/reviews/5.png', alt: 'Рейтинг 5.0 звёзд — 13 отзывов клиентов Prestige Auto Moscow' },
 ]
 
 export default function ReviewsSection() {
@@ -60,6 +60,7 @@ export default function ReviewsSection() {
             ref={sectionRef}
             id="reviews"
             className="relative bg-background py-24 md:py-32"
+            aria-label="Отзывы клиентов Prestige Auto Moscow"
         >
             {/* Divider */}
             <div className="section-divider max-w-7xl mx-auto mb-24 md:mb-32" />
