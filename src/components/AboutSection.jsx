@@ -109,16 +109,26 @@ export default function AboutSection() {
                             <h2 className="font-unbounded text-text-primary text-3xl md:text-4xl font-semibold mb-6">
                                 Prestige Auto Moscow
                             </h2>
-                            <p className="font-unbounded text-text-secondary text-base md:text-xl font-light leading-relaxed max-w-4xl text-justify">
+                            <p className="font-unbounded text-text-secondary text-base md:text-xl font-light leading-relaxed max-w-4xl text-justify mb-10 md:mb-12">
                                 Профессиональный дилер с многолетним опытом на рынке премиальных и коллекционных
                                 автомобилей. Специализация — подбор, проверка и продажа автомобилей высшего класса.
                                 Каждый экземпляр проходит тщательную диагностику и юридическую проверку перед
                                 выставлением на продажу. Прозрачность и честность — главные принципы работы.
                             </p>
+
+                            {/* Realistic Dealership Image */}
+                            <div className="relative w-full aspect-[21/9] md:aspect-[16/9] rounded-2xl overflow-hidden shadow-xl group">
+                                <img
+                                    src="/images/premium_showroom.png"
+                                    alt="Шоурум премиальных автомобилей Prestige Auto Moscow"
+                                    className="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-[1.5s] ease-out"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-60" />
+                            </div>
                         </div>
 
                         {/* WOW Effect Badge */}
-                        <div className="relative w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 flex-shrink-0 flex items-center justify-center self-center hidden md:flex">
+                        <div className="relative w-56 h-56 md:w-64 md:h-64 lg:w-80 lg:h-80 flex-shrink-0 flex items-center justify-center self-center mt-6 lg:mt-0">
                             {/* Outer animated rings */}
                             <div className="absolute inset-0 rounded-full border border-black/5 border-dashed animate-[spin_20s_linear_infinite]" />
                             <div className="absolute inset-4 sm:inset-6 rounded-full border border-black/10 animate-[spin_15s_linear_infinite_reverse]" />
