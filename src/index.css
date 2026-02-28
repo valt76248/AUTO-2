@@ -20,7 +20,13 @@
     background-color: #FAFAFA;
     color: #0A0A0A;
     overflow-x: hidden;
-    cursor: none;
+  }
+
+  /* Только для десктопов скрываем стандартный курсор для использования кастомного */
+  @media (pointer: fine) {
+    body {
+      cursor: none;
+    }
   }
 
   html.lenis,

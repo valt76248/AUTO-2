@@ -56,9 +56,10 @@ export default function Cursor() {
         const attachEventListeners = () => {
             const links = document.querySelectorAll('a, button, .interactive')
             links.forEach(link => {
-                link.classList.add('cursor-none')
-                // Hide cursor children
-                link.querySelectorAll('*').forEach(child => child.classList.add('cursor-none'))
+                // Ensure desktop cursor is hidden and replaced with custom cursor
+                if (window.matchMedia('(pointer: fine)').matches) {
+                    link.style.cursor = 'none'
+                }
 
                 link.addEventListener('mouseenter', onMouseEnterLink)
                 link.addEventListener('mouseleave', onMouseLeaveLink)
