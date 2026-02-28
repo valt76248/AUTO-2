@@ -101,34 +101,67 @@ export default function AboutSection() {
 
             <div className="px-6 md:px-12">
                 <div className="max-w-7xl mx-auto">
-                    <div ref={contentRef} className="mb-8 md:mb-20 opacity-0 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8 lg:gap-20">
-                        <div className="flex-1">
+                    <div ref={contentRef} className="mb-8 md:mb-20 opacity-0 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-0 lg:gap-20">
+                        <div className="flex-1 w-full relative">
                             <p className="font-unbounded text-text-secondary text-[10px] tracking-[0.3em] uppercase mb-4">
                                 О продавце
                             </p>
                             <h2 className="font-unbounded text-text-primary text-3xl md:text-4xl font-semibold mb-6">
                                 Prestige Auto Moscow
                             </h2>
-                            <p className="font-unbounded text-text-secondary text-base md:text-xl font-light leading-relaxed max-w-4xl text-justify mb-4 md:mb-12">
+                            <p className="font-unbounded text-text-secondary text-base md:text-xl font-light leading-relaxed max-w-4xl text-justify mb-6 lg:mb-12 relative z-10">
                                 Профессиональный дилер с многолетним опытом на рынке премиальных и коллекционных
                                 автомобилей. Специализация — подбор, проверка и продажа автомобилей высшего класса.
                                 Каждый экземпляр проходит тщательную диагностику и юридическую проверку перед
                                 выставлением на продажу. Прозрачность и честность — главные принципы работы.
                             </p>
 
-                            {/* Realistic Dealership Image */}
-                            <div className="relative w-full aspect-[21/9] md:aspect-[16/9] rounded-2xl overflow-hidden shadow-xl group">
-                                <img
-                                    src="/images/premium_showroom.png"
-                                    alt="Шоурум премиальных автомобилей Prestige Auto Moscow"
-                                    className="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-[1.5s] ease-out"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-60" />
+                            {/* Realistic Dealership Image & Mobile Badge Wrappper */}
+                            <div className="relative w-full mt-2 lg:mt-0 z-0">
+                                {/* The Image with overflow-hidden */}
+                                <div className="relative w-full aspect-[21/9] md:aspect-[16/9] rounded-2xl overflow-hidden shadow-xl group">
+                                    <img
+                                        src="/images/premium_showroom.png"
+                                        alt="Шоурум премиальных автомобилей Prestige Auto Moscow"
+                                        className="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-[1.5s] ease-out"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-60" />
+                                </div>
+
+                                {/* WOW Effect Badge - MOBILE VERSION (Overlapping image) */}
+                                <div className="lg:hidden absolute -bottom-6 -right-2 md:-bottom-8 md:-right-4 w-36 h-36 md:w-48 md:h-48 flex items-center justify-center pointer-events-none drop-shadow-2xl">
+                                    {/* Glassmorphism backing behind text to keep it readable */}
+                                    <div className="absolute inset-1.5 bg-[#f6f6f6]/95 backdrop-blur-xl rounded-full border border-black/5" />
+
+                                    {/* Outer animated rings */}
+                                    <div className="absolute inset-1.5 rounded-full border border-black/10 border-dashed animate-[spin_20s_linear_infinite]" />
+                                    <div className="absolute inset-[15%] rounded-full border border-black/10 animate-[spin_15s_linear_infinite_reverse]" />
+
+                                    {/* Rotating Circular Text */}
+                                    <div className="absolute inset-0 animate-[spin_25s_linear_infinite] flex items-center justify-center">
+                                        <svg className="w-[110%] h-[110%] text-text-primary/70" viewBox="0 0 100 100">
+                                            <path id="textCircleMobile" d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0" fill="transparent" />
+                                            <text className="font-unbounded text-[8.2px] tracking-[0.14em] uppercase font-medium" fill="currentColor">
+                                                <textPath href="#textCircleMobile" startOffset="0%">
+                                                    PRESTIGE AUTO MOSCOW • PREMIUM SELECTION •
+                                                </textPath>
+                                            </text>
+                                        </svg>
+                                    </div>
+
+                                    {/* Center Emblem/Star */}
+                                    <div className="absolute inset-0 flex items-center justify-center pointer-events-auto group/star">
+                                        <div className="absolute inset-0 bg-accent/5 rounded-full animate-pulse blur-md" />
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" className="text-accent relative z-10 w-6 h-6 md:w-8 md:h-8 transition-transform duration-700 group-hover/star:rotate-180 group-hover/star:scale-110">
+                                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="currentColor" />
+                                        </svg>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
-                        {/* WOW Effect Badge */}
-                        <div className="relative w-56 h-56 md:w-64 md:h-64 lg:w-80 lg:h-80 flex-shrink-0 flex items-center justify-center self-center lg:mt-0">
+                        {/* WOW Effect Badge - DESKTOP VERSION */}
+                        <div className="hidden lg:flex relative w-56 h-56 md:w-64 md:h-64 lg:w-80 lg:h-80 flex-shrink-0 items-center justify-center self-center lg:mt-0">
                             {/* Outer animated rings */}
                             <div className="absolute inset-0 rounded-full border border-black/5 border-dashed animate-[spin_20s_linear_infinite]" />
                             <div className="absolute inset-4 sm:inset-6 rounded-full border border-black/10 animate-[spin_15s_linear_infinite_reverse]" />
