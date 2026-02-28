@@ -108,7 +108,7 @@ export default function AboutSection() {
                         <h2 className="font-unbounded text-text-primary text-3xl md:text-4xl font-semibold mb-6">
                             Prestige Auto Moscow
                         </h2>
-                        <p className="font-unbounded text-text-secondary text-sm md:text-base font-light leading-relaxed max-w-2xl">
+                        <p className="font-unbounded text-text-secondary text-base md:text-xl font-light leading-relaxed max-w-4xl text-justify">
                             Профессиональный дилер с многолетним опытом на рынке премиальных и коллекционных
                             автомобилей. Специализация — подбор, проверка и продажа автомобилей высшего класса.
                             Каждый экземпляр проходит тщательную диагностику и юридическую проверку перед
