@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState, useCallback } from 'react'
 import Lenis from 'lenis'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -11,6 +11,9 @@ import AboutSection from './components/AboutSection'
 import ReviewsSection from './components/ReviewsSection'
 import Footer from './components/Footer'
 import CarModal from './components/CarModal'
+import Cursor from './components/Cursor'
+import ScrollProgress from './components/ScrollProgress'
+import Marquee from './components/Marquee'
 import carsData from './data/cars'
 
 gsap.registerPlugin(ScrollTrigger)
@@ -56,9 +59,9 @@ function App() {
         }
     }, [selectedCar])
 
-    const handlePreloaderComplete = () => {
+    const handlePreloaderComplete = useCallback(() => {
         setLoading(false)
-    }
+    }, [])
 
     const handleCarSelect = (car) => {
         setSelectedCar(car)
@@ -70,6 +73,8 @@ function App() {
 
     return (
         <>
+            <Cursor />
+            <ScrollProgress />
             <Preloader onComplete={handlePreloaderComplete} loading={loading} />
 
             <div className={`${loading ? 'opacity-0' : 'opacity-100'} transition-opacity duration-300`}>
@@ -77,6 +82,12 @@ function App() {
                 <main>
                     <HeroSection car={carsData[0]} loading={loading} />
                     <CatalogSection cars={carsData} onCarSelect={handleCarSelect} />
+                    <Marquee
+                        items={['BMW', 'Volvo', 'Dodge', 'Chevrolet', 'Ford', 'Prestige Auto']}
+                        speed={40}
+                        separator="✦"
+                        className="bg-[#0A0A0A] text-white/10"
+                    />
                     <AboutSection />
                     <ReviewsSection />
                 </main>

@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import Magnetic from './Magnetic'
 
 export default function AboutSection() {
     const sectionRef = useRef(null)
@@ -103,8 +104,8 @@ export default function AboutSection() {
                         <p className="font-unbounded text-text-secondary text-[10px] tracking-[0.3em] uppercase mb-4">
                             О продавце
                         </p>
-                        <h2 className="font-unbounded text-text-primary text-4xl md:text-5xl font-semibold mb-6">
-                            Александр
+                        <h2 className="font-unbounded text-text-primary text-3xl md:text-4xl font-semibold mb-6">
+                            Prestige Auto Moscow
                         </h2>
                         <p className="font-unbounded text-text-secondary text-sm md:text-base font-light leading-relaxed max-w-2xl">
                             Профессиональный дилер с многолетним опытом на рынке премиальных и коллекционных
@@ -117,21 +118,22 @@ export default function AboutSection() {
                     {/* Advantages grid */}
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
                         {advantages.map((item, index) => (
-                            <div
-                                key={index}
-                                ref={(el) => (statsRef.current[index] = el)}
-                                className="group p-6 md:p-8 rounded-2xl bg-background hover:bg-white hover:shadow-card transition-all duration-500 opacity-0"
-                            >
-                                <div className="text-text-secondary group-hover:text-text-primary transition-colors duration-300 mb-4">
-                                    {item.icon}
+                            <Magnetic key={index}>
+                                <div
+                                    ref={(el) => (statsRef.current[index] = el)}
+                                    className="group p-6 md:p-8 rounded-2xl bg-background hover:bg-white border border-transparent hover:border-black/5 transition-all duration-500 opacity-0 will-change-transform"
+                                >
+                                    <div className="text-text-secondary group-hover:text-text-primary transition-colors duration-300 mb-4">
+                                        {item.icon}
+                                    </div>
+                                    <h3 className="font-unbounded text-text-primary text-base font-semibold mb-2">
+                                        {item.title}
+                                    </h3>
+                                    <p className="font-unbounded text-text-secondary text-xs font-light leading-relaxed">
+                                        {item.desc}
+                                    </p>
                                 </div>
-                                <h3 className="font-unbounded text-text-primary text-base font-semibold mb-2">
-                                    {item.title}
-                                </h3>
-                                <p className="font-unbounded text-text-secondary text-xs font-light leading-relaxed">
-                                    {item.desc}
-                                </p>
-                            </div>
+                            </Magnetic>
                         ))}
                     </div>
                 </div>

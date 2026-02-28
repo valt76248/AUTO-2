@@ -3,30 +3,11 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 const reviews = [
-    {
-        name: 'Дмитрий К.',
-        text: 'Купил Genesis G70 у Александра. Всё как описано в объявлении, без сюрпризов. Машина в идеальном состоянии, все документы прозрачны. Рекомендую!',
-        rating: 5,
-        date: 'Январь 2026',
-    },
-    {
-        name: 'Михаил С.',
-        text: 'Приобрёл Ram 1500 — профессиональный подход к сделке. Александр подробно рассказал об автомобиле, показал все нюансы. Очень доволен покупкой.',
-        rating: 5,
-        date: 'Декабрь 2025',
-    },
-    {
-        name: 'Андрей В.',
-        text: 'Отличный продавец! Быстро ответил на все вопросы, организовал осмотр в удобное время. Машина полностью соответствовала описанию. Пять звёзд заслуженно.',
-        rating: 5,
-        date: 'Ноябрь 2025',
-    },
-    {
-        name: 'Сергей Л.',
-        text: 'Сделка прошла максимально комфортно. Александр — профессионал, который ценит своё время и время клиента. Автомобиль без нареканий.',
-        rating: 5,
-        date: 'Октябрь 2025',
-    },
+    { src: 'images/reviews/1.png', alt: 'Отзыв от клиента' },
+    { src: 'images/reviews/2.png', alt: 'Отзыв от клиента' },
+    { src: 'images/reviews/3.png', alt: 'Отзыв от клиента' },
+    { src: 'images/reviews/4.png', alt: 'Отзыв от клиента' },
+    { src: 'images/reviews/5.png', alt: 'Рейтинг и статистика' },
 ]
 
 export default function ReviewsSection() {
@@ -97,51 +78,19 @@ export default function ReviewsSection() {
                         </h2>
                     </div>
 
-                    {/* Reviews grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                    {/* MASONRY: Reviews images grid */}
+                    <div className="columns-1 md:columns-2 lg:columns-3 gap-6 md:gap-8 space-y-6 md:space-y-8">
                         {reviews.map((review, index) => (
                             <div
                                 key={index}
                                 ref={(el) => (cardsRef.current[index] = el)}
-                                className="bg-surface rounded-2xl p-8 shadow-card hover:shadow-card-hover transition-shadow duration-500 opacity-0"
+                                className="break-inside-avoid opacity-0 rounded-2xl overflow-hidden shadow-card hover:shadow-card-hover transition-all duration-500"
                             >
-                                {/* Stars */}
-                                <div className="flex items-center gap-1 mb-4">
-                                    {Array.from({ length: review.rating }).map((_, i) => (
-                                        <svg
-                                            key={i}
-                                            width="14"
-                                            height="14"
-                                            viewBox="0 0 24 24"
-                                            fill="#0A0A0A"
-                                            stroke="none"
-                                        >
-                                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                                        </svg>
-                                    ))}
-                                </div>
-
-                                {/* Review text */}
-                                <p className="font-unbounded text-text-primary text-sm font-light leading-relaxed mb-6">
-                                    «{review.text}»
-                                </p>
-
-                                {/* Author */}
-                                <div className="flex items-center justify-between">
-                                    <div>
-                                        <p className="font-unbounded text-text-primary text-xs font-medium">
-                                            {review.name}
-                                        </p>
-                                        <p className="font-unbounded text-text-secondary text-[10px] font-light">
-                                            {review.date}
-                                        </p>
-                                    </div>
-                                    <div className="w-8 h-8 bg-background rounded-full flex items-center justify-center">
-                                        <span className="font-unbounded text-text-secondary text-[10px] font-medium">
-                                            {review.name.charAt(0)}
-                                        </span>
-                                    </div>
-                                </div>
+                                <img
+                                    src={review.src}
+                                    alt={review.alt}
+                                    className="w-full h-auto object-cover"
+                                />
                             </div>
                         ))}
                     </div>

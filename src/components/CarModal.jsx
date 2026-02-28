@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
+import SplitType from 'split-type'
+import Magnetic from './Magnetic'
 
 export default function CarModal({ car, onClose }) {
     const overlayRef = useRef(null)
@@ -18,7 +20,41 @@ export default function CarModal({ car, onClose }) {
             gsap.fromTo(
                 modalRef.current,
                 { y: 60, opacity: 0, scale: 0.97 },
-                { y: 0, opacity: 1, scale: 1, duration: 0.5, ease: 'power3.out', delay: 0.1 }
+                {
+                    y: 0,
+                    opacity: 1,
+                    scale: 1,
+                    duration: 0.5,
+                    ease: 'power3.out',
+                    delay: 0.1,
+                    onComplete: () => {
+                        const titleEl = modalRef.current?.querySelector('.modal-title')
+                        const subtitleEl = modalRef.current?.querySelector('.modal-subtitle')
+                        const descEl = modalRef.current?.querySelector('.modal-desc')
+
+                        if (titleEl) {
+                            const titleSplit = new SplitType(titleEl, { types: 'words,chars' })
+                            gsap.fromTo(titleSplit.chars,
+                                { y: 20, opacity: 0 },
+                                { y: 0, opacity: 1, duration: 0.5, stagger: 0.02, ease: 'back.out(1.7)' }
+                            )
+                        }
+                        if (subtitleEl) {
+                            const subtitleSplit = new SplitType(subtitleEl, { types: 'words' })
+                            gsap.fromTo(subtitleSplit.words,
+                                { y: 10, opacity: 0 },
+                                { y: 0, opacity: 1, duration: 0.5, stagger: 0.05, ease: 'power2.out', delay: 0.2 }
+                            )
+                        }
+                        if (descEl) {
+                            const descSplit = new SplitType(descEl, { types: 'lines' })
+                            gsap.fromTo(descSplit.lines,
+                                { y: 10, opacity: 0 },
+                                { y: 0, opacity: 1, duration: 0.5, stagger: 0.1, ease: 'power2.out', delay: 0.4 }
+                            )
+                        }
+                    }
+                }
             )
         })
 
@@ -113,24 +149,50 @@ export default function CarModal({ car, onClose }) {
                     data-lenis-prevent
                 >
                     {/* Close button */}
-                    <button
-                        onClick={handleClose}
-                        className="absolute top-4 right-4 z-20 w-10 h-10 bg-white/90 hover:bg-white rounded-full flex items-center justify-center transition-colors duration-200 shadow-sm"
-                    >
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0A0A0A" strokeWidth="2" strokeLinecap="round">
-                            <line x1="18" y1="6" x2="6" y2="18" />
-                            <line x1="6" y1="6" x2="18" y2="18" />
-                        </svg>
-                    </button>
+                    <Magnetic>
+                        <button
+                            onClick={handleClose}
+                            className="absolute top-4 right-4 z-20 w-10 h-10 bg-white/90 hover:bg-white rounded-full flex items-center justify-center transition-colors duration-200 shadow-sm"
+                        >
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0A0A0A" strokeWidth="2" strokeLinecap="round">
+                                <line x1="18" y1="6" x2="6" y2="18" />
+                                <line x1="6" y1="6" x2="18" y2="18" />
+                            </svg>
+                        </button>
+                    </Magnetic>
 
                     {/* Gallery */}
                     <div className="relative">
                         {/* Main image */}
-                        <div className="relative aspect-[16/10] md:aspect-[16/9] rounded-t-3xl overflow-hidden bg-background">
+                        <div
+                            className="relative aspect-[16/10] md:aspect-[16/9] rounded-t-3xl overflow-hidden bg-background"
+                            onMouseMove={(e) => {
+                                const rect = e.currentTarget.getBoundingClientRect();
+                                const x = (e.clientX - rect.left) / rect.width - 0.5;
+                                const y = (e.clientY - rect.top) / rect.height - 0.5;
+
+                                gsap.to(e.currentTarget.querySelector('img'), {
+                                    x: x * -40,
+                                    y: y * -40,
+                                    scale: 1.1,
+                                    duration: 0.5,
+                                    ease: 'power2.out'
+                                })
+                            }}
+                            onMouseLeave={(e) => {
+                                gsap.to(e.currentTarget.querySelector('img'), {
+                                    x: 0,
+                                    y: 0,
+                                    scale: 1,
+                                    duration: 1,
+                                    ease: 'power3.out'
+                                })
+                            }}
+                        >
                             <img
                                 src={car.photos[activePhoto]}
                                 alt={`${car.brand} ${car.model} — фото ${activePhoto + 1}`}
-                                className="w-full h-full object-cover"
+                                className="w-full h-full object-cover origin-center will-change-transform"
                             />
 
                             {/* Nav arrows */}
@@ -167,8 +229,8 @@ export default function CarModal({ car, onClose }) {
                                     key={index}
                                     onClick={() => setActivePhoto(index)}
                                     className={`flex-shrink-0 w-16 h-12 md:w-20 md:h-14 rounded-lg overflow-hidden border-2 transition-all duration-200 ${index === activePhoto
-                                            ? 'border-accent opacity-100'
-                                            : 'border-transparent opacity-50 hover:opacity-80'
+                                        ? 'border-accent opacity-100'
+                                        : 'border-transparent opacity-50 hover:opacity-80'
                                         }`}
                                 >
                                     <img
@@ -198,27 +260,29 @@ export default function CarModal({ car, onClose }) {
                                         </span>
                                     )}
                                 </div>
-                                <h2 className="font-unbounded text-text-primary text-3xl md:text-4xl font-bold mb-1">
+                                <h2 className="modal-title font-unbounded text-text-primary text-3xl md:text-4xl font-bold mb-1">
                                     {car.brand} {car.model}
                                 </h2>
-                                <p className="font-unbounded text-text-secondary text-sm">
+                                <p className="modal-subtitle font-unbounded text-text-secondary text-sm">
                                     {car.year} · {car.mileage} км · {car.color} · {car.body}
                                 </p>
                             </div>
 
-                            <a
-                                href="tel:+70000000000"
-                                className="inline-flex items-center gap-2 font-unbounded text-xs tracking-[0.1em] uppercase bg-accent text-white px-8 py-4 rounded-full hover:bg-accent-hover transition-colors duration-300 flex-shrink-0"
-                            >
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-                                </svg>
-                                Позвонить
-                            </a>
+                            <Magnetic>
+                                <a
+                                    href="tel:+70000000000"
+                                    className="inline-flex items-center gap-2 font-unbounded text-xs tracking-[0.1em] uppercase bg-accent text-white px-8 py-4 rounded-full hover:bg-accent-hover transition-colors duration-300 flex-shrink-0"
+                                >
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                                    </svg>
+                                    Позвонить
+                                </a>
+                            </Magnetic>
                         </div>
 
                         {/* Tagline */}
-                        <p className="font-unbounded text-text-secondary text-sm font-light leading-relaxed mb-10 max-w-2xl">
+                        <p className="modal-desc font-unbounded text-text-secondary text-sm font-light leading-relaxed mb-10 max-w-2xl">
                             {car.tagline}
                         </p>
 
@@ -253,15 +317,34 @@ export default function CarModal({ car, onClose }) {
                             <p className="font-unbounded text-text-secondary text-xs font-light mb-4">
                                 Интересует этот автомобиль?
                             </p>
-                            <a
-                                href="tel:+70000000000"
-                                className="inline-flex items-center gap-3 font-unbounded text-sm tracking-[0.1em] uppercase bg-accent text-white px-10 py-5 rounded-full hover:bg-accent-hover transition-colors duration-300"
-                            >
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-                                </svg>
-                                Позвонить Александру
-                            </a>
+                            <div className="flex flex-col sm:flex-row items-center gap-4">
+                                <Magnetic>
+                                    <a
+                                        href="tel:+70000000000"
+                                        className="w-full sm:w-auto inline-flex items-center justify-center gap-3 font-unbounded text-sm tracking-[0.1em] uppercase bg-accent text-white px-10 py-5 rounded-full hover:bg-accent-hover transition-colors duration-300"
+                                    >
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                                        </svg>
+                                        Позвонить Борису
+                                    </a>
+                                </Magnetic>
+
+                                <Magnetic>
+                                    <a
+                                        href="https://t.me/Boris_christmas"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="w-full sm:w-auto inline-flex items-center justify-center gap-3 font-unbounded text-sm tracking-[0.1em] uppercase bg-transparent text-text-primary border border-text-primary/20 px-10 py-5 rounded-full hover:bg-text-primary hover:text-white transition-all duration-300"
+                                    >
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                            <path d="m22 2-7 20-4-9-9-4Z" />
+                                            <path d="M22 2 11 13" />
+                                        </svg>
+                                        Telegram
+                                    </a>
+                                </Magnetic>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import Magnetic from './Magnetic'
 
 export default function Header() {
     const headerRef = useRef(null)
@@ -42,8 +43,8 @@ export default function Header() {
         >
             <div className="max-w-7xl mx-auto flex items-center justify-between">
                 {/* Logo */}
-                <a href="#" className="font-unbounded text-text-primary text-lg font-semibold tracking-tight">
-                    ALEXANDER<span className="font-light text-text-secondary ml-1">AUTO</span>
+                <a href="#" className="font-unbounded text-text-primary text-base font-semibold tracking-tight uppercase">
+                    Prestige<span className="font-light text-text-secondary ml-1">Auto Moscow</span>
                 </a>
 
                 {/* Nav — desktop */}
@@ -69,12 +70,14 @@ export default function Header() {
                 </nav>
 
                 {/* CTA */}
-                <a
-                    href="tel:+70000000000"
-                    className="font-unbounded text-xs tracking-[0.1em] uppercase bg-accent text-white px-6 py-3 rounded-full hover:bg-accent-hover transition-colors duration-300 cta-glow"
-                >
-                    Позвонить
-                </a>
+                <Magnetic>
+                    <a
+                        href="tel:+70000000000"
+                        className="font-unbounded text-xs tracking-[0.1em] uppercase bg-accent text-white px-6 py-3 rounded-full hover:bg-accent-hover transition-colors duration-300"
+                    >
+                        Позвонить
+                    </a>
+                </Magnetic>
             </div>
         </header>
     )

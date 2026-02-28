@@ -7,47 +7,40 @@ export default function Preloader({ onComplete, loading }) {
     const lineRef = useRef(null)
 
     useEffect(() => {
-        if (!loading) return
+        const tl = gsap.timeline({
+            onComplete: () => {
+                gsap.to(preloaderRef.current, {
+                    yPercent: -100,
+                    duration: 0.8,
+                    ease: 'power3.inOut',
+                    onComplete
+                })
+            }
+        });
 
-        const ctx = gsap.context(() => {
-            const tl = gsap.timeline({
-                onComplete: () => {
-                    gsap.to(preloaderRef.current, {
-                        clipPath: 'inset(0 0 100% 0)',
-                        duration: 0.8,
-                        ease: 'power3.inOut',
-                        onComplete,
-                    })
-                },
-            })
+        // Counter animation
+        tl.to({ val: 0 }, {
+            val: 100,
+            duration: 2,
+            ease: "power2.inOut",
+            onUpdate: function () {
+                if (counterRef.current) {
+                    counterRef.current.innerText = Math.floor(this.targets()[0].val) + "%";
+                }
+            }
+        });
 
-            const proxy = { percent: 0 }
-            tl.to(proxy, {
-                percent: 100,
-                duration: 2,
-                ease: 'power2.inOut',
-                onUpdate: () => {
-                    if (counterRef.current) {
-                        counterRef.current.textContent = Math.round(proxy.percent) + '%'
-                    }
-                },
-            })
+        // Line animation
+        tl.to(lineRef.current, {
+            scaleX: 1,
+            duration: 2,
+            ease: "power2.inOut"
+        }, 0);
 
-            tl.to(
-                lineRef.current,
-                {
-                    scaleX: 1,
-                    duration: 2,
-                    ease: 'power2.inOut',
-                },
-                0
-            )
-
-            tl.to({}, { duration: 0.3 })
-        }, preloaderRef)
-
-        return () => ctx.revert()
-    }, [loading, onComplete])
+        return () => {
+            tl.kill();
+        };
+    }, [onComplete]);
 
     return (
         <div
@@ -56,8 +49,8 @@ export default function Preloader({ onComplete, loading }) {
                 }`}
             style={{ clipPath: 'inset(0 0 0% 0)' }}
         >
-            <h2 className="font-unbounded text-white/40 text-sm tracking-[0.3em] uppercase mb-8">
-                Alexander Auto
+            <h2 className="font-unbounded text-white/40 text-xs tracking-[0.3em] uppercase mb-8">
+                Prestige Auto Moscow
             </h2>
             <div className="w-48 h-[1px] bg-white/10 mb-6 overflow-hidden">
                 <div

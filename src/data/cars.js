@@ -13,24 +13,24 @@ const carsData = [
         condition: "Отличное",
         accidents: false,
         ownerCount: "По ДКП",
-        heroImage: "/images/ferrari-348/Скриншот 26-02-2026 17.03.49.png",
+        heroImage: "images/ferrari-348/Скриншот 26-02-2026 17.03.49.png",
         photos: [
-            "/images/ferrari-348/Скриншот 26-02-2026 17.03.03.png",
-            "/images/ferrari-348/Скриншот 26-02-2026 17.03.49.png",
-            "/images/ferrari-348/Скриншот 26-02-2026 17.04.08.png",
-            "/images/ferrari-348/Скриншот 26-02-2026 17.04.22.png",
-            "/images/ferrari-348/Скриншот 26-02-2026 17.05.21.png",
-            "/images/ferrari-348/Скриншот 26-02-2026 17.05.39.png",
-            "/images/ferrari-348/Скриншот 26-02-2026 17.06.40.png",
-            "/images/ferrari-348/Скриншот 26-02-2026 17.07.06.png",
-            "/images/ferrari-348/Скриншот 26-02-2026 17.07.22.png",
-            "/images/ferrari-348/Скриншот 26-02-2026 17.07.37.png",
-            "/images/ferrari-348/Скриншот 26-02-2026 17.07.52.png",
-            "/images/ferrari-348/Скриншот 26-02-2026 17.08.09.png",
-            "/images/ferrari-348/Скриншот 26-02-2026 17.08.29.png",
-            "/images/ferrari-348/Скриншот 26-02-2026 17.08.42.png",
-            "/images/ferrari-348/Скриншот 26-02-2026 17.08.59.png",
-            "/images/ferrari-348/Скриншот 26-02-2026 17.10.08.png",
+            "images/ferrari-348/Скриншот 26-02-2026 17.03.03.png",
+            "images/ferrari-348/Скриншот 26-02-2026 17.03.49.png",
+            "images/ferrari-348/Скриншот 26-02-2026 17.04.08.png",
+            "images/ferrari-348/Скриншот 26-02-2026 17.04.22.png",
+            "images/ferrari-348/Скриншот 26-02-2026 17.05.21.png",
+            "images/ferrari-348/Скриншот 26-02-2026 17.05.39.png",
+            "images/ferrari-348/Скриншот 26-02-2026 17.06.40.png",
+            "images/ferrari-348/Скриншот 26-02-2026 17.07.06.png",
+            "images/ferrari-348/Скриншот 26-02-2026 17.07.22.png",
+            "images/ferrari-348/Скриншот 26-02-2026 17.07.37.png",
+            "images/ferrari-348/Скриншот 26-02-2026 17.07.52.png",
+            "images/ferrari-348/Скриншот 26-02-2026 17.08.09.png",
+            "images/ferrari-348/Скриншот 26-02-2026 17.08.29.png",
+            "images/ferrari-348/Скриншот 26-02-2026 17.08.42.png",
+            "images/ferrari-348/Скриншот 26-02-2026 17.08.59.png",
+            "images/ferrari-348/Скриншот 26-02-2026 17.10.08.png",
         ],
         specs: {
             engine: {
@@ -82,21 +82,21 @@ const carsData = [
         condition: "Новый",
         accidents: false,
         ownerCount: "Первый",
-        heroImage: "/images/ram-1500-rho/1200x900n.webp",
+        heroImage: "images/ram-1500-rho/1200x900n.webp",
         photos: [
-            "/images/ram-1500-rho/1200x900n.webp",
-            "/images/ram-1500-rho/1200x900n (1).webp",
-            "/images/ram-1500-rho/1200x900n (13).webp",
-            "/images/ram-1500-rho/1200x900n (2).webp",
-            "/images/ram-1500-rho/1200x900n (3).webp",
-            "/images/ram-1500-rho/1200x900n (4).webp",
-            "/images/ram-1500-rho/1200x900n (5).webp",
-            "/images/ram-1500-rho/1200x900n (6).webp",
-            "/images/ram-1500-rho/1200x900n (7).webp",
-            "/images/ram-1500-rho/1200x900n (8).webp",
-            "/images/ram-1500-rho/1200x900n (9).webp",
-            "/images/ram-1500-rho/1200x900n (10).webp",
-            "/images/ram-1500-rho/1200x900n (11).webp",
+            "images/ram-1500-rho/1200x900n.webp",
+            "images/ram-1500-rho/1200x900n (1).webp",
+            "images/ram-1500-rho/1200x900n (13).webp",
+            "images/ram-1500-rho/1200x900n (2).webp",
+            "images/ram-1500-rho/1200x900n (3).webp",
+            "images/ram-1500-rho/1200x900n (4).webp",
+            "images/ram-1500-rho/1200x900n (5).webp",
+            "images/ram-1500-rho/1200x900n (6).webp",
+            "images/ram-1500-rho/1200x900n (7).webp",
+            "images/ram-1500-rho/1200x900n (8).webp",
+            "images/ram-1500-rho/1200x900n (9).webp",
+            "images/ram-1500-rho/1200x900n (10).webp",
+            "images/ram-1500-rho/1200x900n (11).webp",
         ],
         specs: {
             engine: {
@@ -145,21 +145,21 @@ const carsData = [
         condition: "Новый",
         accidents: false,
         ownerCount: "Первый",
-        heroImage: "/images/audi-q5/1200x900n.webp",
+        heroImage: "images/audi-q5/1200x900n.webp",
         photos: [
-            "/images/audi-q5/1200x900n.webp",
-            "/images/audi-q5/1200x900n (1).webp",
-            "/images/audi-q5/1200x900n (2).webp",
-            "/images/audi-q5/1200x900n (3).webp",
-            "/images/audi-q5/1200x900n (4).webp",
-            "/images/audi-q5/1200x900n (5).webp",
-            "/images/audi-q5/1200x900n (6).webp",
-            "/images/audi-q5/1200x900n (7).webp",
-            "/images/audi-q5/1200x900n (8).webp",
-            "/images/audi-q5/1200x900n (9).webp",
-            "/images/audi-q5/1200x900n (10).webp",
-            "/images/audi-q5/1200x900n (11).webp",
-            "/images/audi-q5/1200x900n (12).webp",
+            "images/audi-q5/1200x900n.webp",
+            "images/audi-q5/1200x900n (1).webp",
+            "images/audi-q5/1200x900n (2).webp",
+            "images/audi-q5/1200x900n (3).webp",
+            "images/audi-q5/1200x900n (4).webp",
+            "images/audi-q5/1200x900n (5).webp",
+            "images/audi-q5/1200x900n (6).webp",
+            "images/audi-q5/1200x900n (7).webp",
+            "images/audi-q5/1200x900n (8).webp",
+            "images/audi-q5/1200x900n (9).webp",
+            "images/audi-q5/1200x900n (10).webp",
+            "images/audi-q5/1200x900n (11).webp",
+            "images/audi-q5/1200x900n (12).webp",
         ],
         specs: {
             engine: {
@@ -205,20 +205,20 @@ const carsData = [
         condition: "Новый",
         accidents: false,
         ownerCount: "Первый",
-        heroImage: "/images/ram-1500-crew/1200x900n.webp",
+        heroImage: "images/ram-1500-crew/1200x900n.webp",
         photos: [
-            "/images/ram-1500-crew/1200x900n.webp",
-            "/images/ram-1500-crew/1200x900n (1).webp",
-            "/images/ram-1500-crew/1200x900n (2).webp",
-            "/images/ram-1500-crew/1200x900n (3).webp",
-            "/images/ram-1500-crew/1200x900n (4).webp",
-            "/images/ram-1500-crew/1200x900n (5).webp",
-            "/images/ram-1500-crew/1200x900n (6).webp",
-            "/images/ram-1500-crew/1200x900n (7).webp",
-            "/images/ram-1500-crew/1200x900n (8).webp",
-            "/images/ram-1500-crew/1200x900n (9).webp",
-            "/images/ram-1500-crew/1200x900n (10).webp",
-            "/images/ram-1500-crew/1200x900n (12).webp",
+            "images/ram-1500-crew/1200x900n.webp",
+            "images/ram-1500-crew/1200x900n (1).webp",
+            "images/ram-1500-crew/1200x900n (2).webp",
+            "images/ram-1500-crew/1200x900n (3).webp",
+            "images/ram-1500-crew/1200x900n (4).webp",
+            "images/ram-1500-crew/1200x900n (5).webp",
+            "images/ram-1500-crew/1200x900n (6).webp",
+            "images/ram-1500-crew/1200x900n (7).webp",
+            "images/ram-1500-crew/1200x900n (8).webp",
+            "images/ram-1500-crew/1200x900n (9).webp",
+            "images/ram-1500-crew/1200x900n (10).webp",
+            "images/ram-1500-crew/1200x900n (12).webp",
         ],
         specs: {
             engine: {
@@ -267,17 +267,17 @@ const carsData = [
         condition: "Отличное",
         accidents: false,
         ownerCount: "Впервые на Авто.ру",
-        heroImage: "/images/nissan-370z/1200x900n.webp",
+        heroImage: "images/nissan-370z/1200x900n.webp",
         photos: [
-            "/images/nissan-370z/1200x900n.webp",
-            "/images/nissan-370z/1200x900n (1).webp",
-            "/images/nissan-370z/1200x900n (2).webp",
-            "/images/nissan-370z/1200x900n (3).webp",
-            "/images/nissan-370z/1200x900n (4).webp",
-            "/images/nissan-370z/1200x900n (5).webp",
-            "/images/nissan-370z/1200x900n (6).webp",
-            "/images/nissan-370z/1200x900n (7).webp",
-            "/images/nissan-370z/1200x900n (11).webp",
+            "images/nissan-370z/1200x900n.webp",
+            "images/nissan-370z/1200x900n (1).webp",
+            "images/nissan-370z/1200x900n (2).webp",
+            "images/nissan-370z/1200x900n (3).webp",
+            "images/nissan-370z/1200x900n (4).webp",
+            "images/nissan-370z/1200x900n (5).webp",
+            "images/nissan-370z/1200x900n (6).webp",
+            "images/nissan-370z/1200x900n (7).webp",
+            "images/nissan-370z/1200x900n (11).webp",
         ],
         specs: {
             engine: {
@@ -327,20 +327,17 @@ const carsData = [
         condition: "Не требует ремонта",
         accidents: "Информация об участии в ДТП",
         ownerCount: "2 владельца",
-        heroImage: "/images/genesis-g70/1200x900n.webp",
+        heroImage: "images/genesis-g70/photo_59@24-02-2026_10-39-35.jpg",
         photos: [
-            "/images/genesis-g70/1200x900n.webp",
-            "/images/genesis-g70/1200x900n (1).webp",
-            "/images/genesis-g70/1200x900n (2).webp",
-            "/images/genesis-g70/1200x900n (3).webp",
-            "/images/genesis-g70/1200x900n (4).webp",
-            "/images/genesis-g70/1200x900n (5).webp",
-            "/images/genesis-g70/1200x900n (6).webp",
-            "/images/genesis-g70/1200x900n (7).webp",
-            "/images/genesis-g70/1200x900n (8).webp",
-            "/images/genesis-g70/1200x900n (9).webp",
-            "/images/genesis-g70/1200x900n (10).webp",
-            "/images/genesis-g70/1200x900n (11).webp",
+            "images/genesis-g70/photo_59@24-02-2026_10-39-35.jpg",
+            "images/genesis-g70/photo_60@24-02-2026_10-40-08.jpg",
+            "images/genesis-g70/photo_61@24-02-2026_10-40-08.jpg",
+            "images/genesis-g70/photo_62@24-02-2026_10-40-08.jpg",
+            "images/genesis-g70/photo_63@24-02-2026_10-40-08.jpg",
+            "images/genesis-g70/photo_64@24-02-2026_10-40-08.jpg",
+            "images/genesis-g70/photo_65@24-02-2026_10-40-08.jpg",
+            "images/genesis-g70/photo_66@24-02-2026_10-40-08.jpg",
+            "images/genesis-g70/photo_67@24-02-2026_10-40-08.jpg",
         ],
         specs: {
             engine: {
@@ -378,6 +375,308 @@ const carsData = [
                 wheels: "225/45 R18",
             },
         },
+    },
+    {
+        id: "bmw-530i-xdrive",
+        brand: "BMW",
+        model: "530i xDrive M Sport",
+        year: 2025,
+        mileage: "1 270",
+        tagline: "Новое поколение G60. M Sport Пакет. В наличии в Москве.",
+        shortSpecs: "2.0 Бензин • Автомат • Полный",
+        color: "Шварцкарбон",
+        body: "Седан",
+        country: "Германия",
+        condition: "Не требует ремонта",
+        accidents: false,
+        ownerCount: "1 владелец",
+        heroImage: "images/bmw-530i-xdrive/1.jpg",
+        photos: [
+            "images/bmw-530i-xdrive/1.jpg",
+            "images/bmw-530i-xdrive/2.jpg",
+            "images/bmw-530i-xdrive/3.jpg",
+            "images/bmw-530i-xdrive/4.jpg",
+            "images/bmw-530i-xdrive/5.jpg",
+            "images/bmw-530i-xdrive/6.jpg",
+            "images/bmw-530i-xdrive/7.jpg",
+            "images/bmw-530i-xdrive/8.jpg",
+            "images/bmw-530i-xdrive/9.jpg",
+            "images/bmw-530i-xdrive/10.jpg",
+            "images/bmw-530i-xdrive/11.jpg"
+        ],
+        specs: {
+            engine: {
+                type: "Бензиновый",
+                displacement: "2 000 см³",
+            },
+            transmission: {
+                gearbox: "Автомат",
+                drive: "Полный",
+            },
+            performance: {
+                fuelType: "АИ-95",
+            },
+            dimensions: {
+                length: "5 060 мм", // Примерная длина для G60
+                width: "1 900 мм",
+            },
+            chassis: {
+                frontBrakes: "М Sport дисковые вентилируемые",
+                rearBrakes: "М Sport дисковые вентилируемые",
+                frontSuspension: "М Спортивная подвеска",
+            },
+        },
+        description: `BMW 530i xDrive M Sport
+Цвет - Шварцкарбон. Автомобиль в наличии в Москве.
+Комплектация включает:
+- Дистанционный запуск двигателя
+- Обогрев рулевого колеса
+- Система комфортного доступа
+- M Sport Пакет и M Sport тормоза
+- Панорамная стеклянная крыша
+- Активная вентиляция и подогрев сидений
+- 4-зонный климат-контроль
+- Адаптивные светодиодные фары
+- Hi-Fi акустика Harman Kardon
+И многие другие опции для комфорта и безопасности.`
+    },
+    {
+        id: "volvo-s60-2005",
+        brand: "Volvo",
+        model: "S60",
+        year: 2005,
+        mileage: "105 000",
+        tagline: "Легендарная надежность. 300 л.с., полный привод и история без ДТП.",
+        shortSpecs: "2.5 Бензин • 300 л.с. • Автомат • Полный",
+        color: "Синий",
+        body: "Седан",
+        country: "Швеция",
+        condition: "Не требует ремонта",
+        accidents: false,
+        ownerCount: "3 владельца",
+        heroImage: "images/volvo-s60-2005/1.jpg",
+        photos: [
+            "images/volvo-s60-2005/1.jpg",
+            "images/volvo-s60-2005/2.jpg",
+            "images/volvo-s60-2005/3.jpg",
+            "images/volvo-s60-2005/4.jpg",
+            "images/volvo-s60-2005/5.jpg",
+            "images/volvo-s60-2005/6.jpg",
+            "images/volvo-s60-2005/7.jpg",
+            "images/volvo-s60-2005/8.jpg",
+            "images/volvo-s60-2005/9.jpg",
+            "images/volvo-s60-2005/10.jpg",
+            "images/volvo-s60-2005/11.jpg",
+            "images/volvo-s60-2005/12.jpg",
+            "images/volvo-s60-2005/13.jpg",
+            "images/volvo-s60-2005/14.jpg"
+        ],
+        specs: {
+            engine: {
+                type: "Бензиновый",
+                displacement: "2 500 см³",
+                power: "300 л.с.",
+            },
+            transmission: {
+                gearbox: "Автомат",
+                drive: "Полный",
+            },
+            performance: {},
+            dimensions: {},
+            chassis: {},
+        },
+        description: `Volvo S60 I рестайлинг (2004—2009)
+Комплектация - базовая, левый руль.
+Автомобиль в отличном состоянии, не битый.
+Оригинал ПТС.`
+    },
+    {
+        id: "dodge-challenger-2019",
+        brand: "Dodge",
+        model: "Challenger",
+        year: 2019,
+        mileage: "66 000",
+        tagline: "Воплощение американской мечты о свободе и мощи.",
+        shortSpecs: "3.6 Бензин • 309 л.с. • Автомат • Задний",
+        color: "Серый",
+        body: "Купе",
+        country: "США",
+        condition: "Не требует ремонта",
+        accidents: false,
+        ownerCount: "1 владелец",
+        heroImage: "images/dodge-challenger-2019/1.jpg",
+        photos: [
+            "images/dodge-challenger-2019/1.jpg",
+            "images/dodge-challenger-2019/2.jpg",
+            "images/dodge-challenger-2019/3.jpg",
+            "images/dodge-challenger-2019/4.jpg",
+            "images/dodge-challenger-2019/5.jpg",
+            "images/dodge-challenger-2019/6.jpg",
+            "images/dodge-challenger-2019/7.jpg"
+        ],
+        specs: {
+            engine: {
+                type: "Бензиновый",
+                displacement: "3 600 см³",
+                power: "309 л.с.",
+            },
+            transmission: {
+                gearbox: "Автомат",
+                drive: "Задний",
+            },
+            performance: {},
+            dimensions: {},
+            chassis: {},
+        },
+        description: `Dodge Challenger 2019 года выпуска, в благородном сером цвете.
+Это не просто автомобиль — это воплощение американской мечты о свободе и мощи. Серый цвет придает образу сдержанную агрессию и элегантность: он не кричит, но заявляет о себе уверенно и со вкусом.
+
+За рулем этого купе вы чувствуете связь с дорогой и контроль над каждой ситуацией. Просторный салон, премиальные материалы и продуманная эргономика создают атмосферу комфорта, которая не утомляет даже в долгих поездках. Это автомобиль для тех, кто ценит индивидуальность и не готов растворяться в потоке.
+Пробег 66 000 км — это золотая середина: автомобиль уже прошел первичную обкатку, все возможные «детские болезни» устранены, а ресурс основных узлов только начал раскрываться. Состояние полностью соответствует заявленному: бережная эксплуатация, своевременное обслуживание и прозрачная история (4 записи в отчете Автотеки).`
+    },
+    {
+        id: "chevrolet-corvette-2023",
+        brand: "Chevrolet",
+        model: "Corvette Stingray",
+        year: 2023,
+        mileage: "23 000",
+        tagline: "Воплощение американской мечты и инженерного триумфа. Эффектный бордовый цвет.",
+        shortSpecs: "6.2 Бензин • 495 л.с. • Робот • Задний",
+        color: "Бордовый",
+        body: "Кабриолет",
+        country: "США",
+        condition: "Не требует ремонта",
+        accidents: false,
+        ownerCount: "1 владелец",
+        heroImage: "images/chevrolet-corvette-2023/1.jpg",
+        photos: [
+            "images/chevrolet-corvette-2023/1.jpg",
+            "images/chevrolet-corvette-2023/2.jpg",
+            "images/chevrolet-corvette-2023/3.jpg",
+            "images/chevrolet-corvette-2023/4.jpg",
+            "images/chevrolet-corvette-2023/5.jpg",
+            "images/chevrolet-corvette-2023/6.jpg",
+            "images/chevrolet-corvette-2023/7.jpg",
+            "images/chevrolet-corvette-2023/8.jpg",
+            "images/chevrolet-corvette-2023/9.jpg",
+            "images/chevrolet-corvette-2023/10.jpg"
+        ],
+        specs: {
+            engine: {
+                type: "Бензиновый",
+                displacement: "6 200 см³",
+                power: "495 л.с.",
+            },
+            transmission: {
+                gearbox: "Робот",
+                drive: "Задний",
+            },
+            performance: {},
+            dimensions: {},
+            chassis: {},
+        },
+        description: `Chevrolet Corvette C8 (2020—2025) Stingray (3LT Z51 Performance Package)
+Это не просто автомобиль — это воплощение американской мечты и инженерного триумфа. Модель, которая изменила представление о суперкарах, сохранив при этом свою легендарную душу. Бордовый цвет здесь не случайность, это дань уважения истории и заявление о вашем характере.
+
+За рулем этого автомобиля каждый выезд превращается в событие. Идеальная развесовка и мгновенная реакция на педаль газа дарят ощущения, доступные лишь в мире большой автомобильной лиги. Салон встречает кокпитом пилота, где каждая кнопка находится на своем месте, а технологии работают на ваше удовольствие.
+Автомобиль 2023 года — это вершина эволюции модели. Состояние идеальное, гарантия активна, история прозрачна. Это редкая возможность стать владельцем современного суперкара без компромиссов и ожидания поставки.`
+    },
+    {
+        id: "ford-mustang-2018",
+        brand: "Ford",
+        model: "Mustang",
+        year: 2018,
+        mileage: "81 000",
+        tagline: "Икона свободы, воплощенная в металле. Сдержанная агрессия и элегантность.",
+        shortSpecs: "2.3 Бензин • 317 л.с. • Автомат • Задний",
+        color: "Серый",
+        body: "Кабриолет",
+        country: "США",
+        condition: "Не требует ремонта",
+        accidents: false,
+        ownerCount: "1 владелец",
+        heroImage: "images/ford-mustang-2018/1.jpg",
+        photos: [
+            "images/ford-mustang-2018/1.jpg",
+            "images/ford-mustang-2018/2.jpg",
+            "images/ford-mustang-2018/3.jpg",
+            "images/ford-mustang-2018/4.jpg",
+            "images/ford-mustang-2018/5.jpg",
+            "images/ford-mustang-2018/6.jpg",
+            "images/ford-mustang-2018/7.jpg",
+            "images/ford-mustang-2018/8.jpg"
+        ],
+        specs: {
+            engine: {
+                type: "Бензиновый",
+                displacement: "2 300 см³",
+                power: "317 л.с.",
+            },
+            transmission: {
+                gearbox: "Автомат",
+                drive: "Задний",
+            },
+            performance: {},
+            dimensions: {},
+            chassis: {},
+        },
+        description: `Ford Mustang VI рестайлинг (2017—2023)
+Это не просто автомобиль — это икона свободы, воплощенная в металле. Серый цвет придает этому мускулистому купе сдержанную агрессию и элегантность: он не кричит, но говорит о вашем вкусе громче любых слов.
+
+За рулем этого Mustang вы чувствуете связь с дорогой, которая рождает уверенность в каждом повороте. Салон встречает атмосферой настоящего драйва: эргономика, созданная для водителя, и материалы, которые приятно касаться. Это автомобиль для тех, кто ценит индивидуальность и не готов растворяться в потоке.
+
+Пробег 81 000 км — это честная цифра для автомобиля, который жил полной жизнью. Регулярное обслуживание, бережное отношение и прозрачная история делают его надежным спутником для нового владельца. Машина, которая уже доказала свою состоятельность, но еще полна сил дарить эмоции.`
+    },
+    {
+        id: "dodge-challenger-srt-2021",
+        brand: "Dodge",
+        model: "Challenger SRT 392",
+        year: 2021,
+        mileage: "8 600",
+        tagline: "Исключительный экземпляр SRT 392. Состояние нового. 492 л.с.",
+        shortSpecs: "6.4 AT • 492 л.с. • Автомат • Задний",
+        color: "Светло-серый",
+        body: "Купе",
+        country: "США",
+        condition: "Не битый",
+        accidents: false,
+        ownerCount: "1 владелец",
+        heroImage: "images/dodge-challenger-srt-2021/1.jpg",
+        photos: [
+            "images/dodge-challenger-srt-2021/1.jpg",
+            "images/dodge-challenger-srt-2021/2.jpg",
+            "images/dodge-challenger-srt-2021/3.jpg",
+            "images/dodge-challenger-srt-2021/4.jpg",
+            "images/dodge-challenger-srt-2021/5.jpg",
+            "images/dodge-challenger-srt-2021/6.jpg",
+            "images/dodge-challenger-srt-2021/7.jpg",
+            "images/dodge-challenger-srt-2021/8.jpg",
+            "images/dodge-challenger-srt-2021/9.jpg",
+            "images/dodge-challenger-srt-2021/10.jpg",
+            "images/dodge-challenger-srt-2021/11.jpg",
+            "images/dodge-challenger-srt-2021/12.jpg"
+        ],
+        specs: {
+            engine: {
+                type: "Бензиновый",
+                displacement: "6 400 см³",
+                power: "492 л.с.",
+            },
+            transmission: {
+                gearbox: "Автомат",
+                drive: "Задний",
+            },
+            performance: {},
+            dimensions: {},
+            chassis: {},
+        },
+        description: `Представляем исключительный экземпляр Dodge Challenger SRT 2021 года выпуска, в благородном светло-сером цвете. 
+
+Это не просто маслкар — это вершина инженерной мысли американской школы. Версия SRT с двигателем 6.4 литра обладает характером, который невозможно спутать ни с чем другим. Глубокий, уверенный звук и динамика, которая прижимает к сиденью, доступны вам уже сегодня. 
+
+Пробег всего 8 600 км — это редчайшее предложение на рынке. Автомобиль практически новый, но лишен рисков первичной обкатки. Светло-серый оттенок кузова выглядит современно и дорого, подчеркивая мускулистые линии и агрессивный стиль модели. Салон не знает износа, каждая деталь сияет чистотой. 
+
+Идеальный выбор для коллекционера или ценителя, который хочет наслаждаться вождением сразу, без вложений и ожиданий. Вы покупаете не просто машину, а готовую легенду в идеальном состоянии. Полная юридическая чистота, прозрачная история и гарантия того, что вы становитесь вторым владельцем автомобиля, который берегли как зеницу ока.`
     },
 ];
 

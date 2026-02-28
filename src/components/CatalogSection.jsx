@@ -65,9 +65,132 @@ export default function CatalogSection({ cars, onCarSelect }) {
                     },
                 })
             }
+
+            // ===== POWERFUL 3D TILT + PARALLAX =====
+            cardsRef.current.forEach((cardWrap) => {
+                if (!cardWrap) return
+
+                const innerCard = cardWrap.querySelector('.tilt-card')
+                const img = cardWrap.querySelector('.tilt-img')
+                const glare = cardWrap.querySelector('.tilt-glare')
+                const textContent = cardWrap.querySelector('.tilt-content')
+                if (!innerCard) return
+
+                const maxRotation = 8 // degrees — subtle but visible
+                const parallaxStrength = 20 // px image shift
+                const perspective = 800
+
+                const handleMouseMove = (e) => {
+                    const rect = innerCard.getBoundingClientRect()
+                    const centerX = rect.left + rect.width / 2
+                    const centerY = rect.top + rect.height / 2
+
+                    // -1 to 1 normalized
+                    const normalX = (e.clientX - centerX) / (rect.width / 2)
+                    const normalY = (e.clientY - centerY) / (rect.height / 2)
+
+                    // Clamp values
+                    const clampedX = Math.max(-1, Math.min(1, normalX))
+                    const clampedY = Math.max(-1, Math.min(1, normalY))
+
+                    // Card 3D rotation
+                    gsap.to(innerCard, {
+                        rotationY: clampedX * maxRotation,
+                        rotationX: -clampedY * maxRotation,
+                        transformPerspective: perspective,
+                        transformOrigin: 'center center',
+                        ease: 'power2.out',
+                        duration: 0.4,
+                        force3D: true,
+                        z: 15, // subtle lift
+                    })
+
+                    // Image parallax — moves opposite to cursor for depth
+                    if (img) {
+                        gsap.to(img, {
+                            x: -clampedX * parallaxStrength,
+                            y: -clampedY * parallaxStrength,
+                            scale: 1.12,
+                            ease: 'power2.out',
+                            duration: 0.4,
+                        })
+                    }
+
+                    // Glare highlight follows cursor
+                    if (glare) {
+                        const glareX = ((e.clientX - rect.left) / rect.width) * 100
+                        const glareY = ((e.clientY - rect.top) / rect.height) * 100
+                        gsap.to(glare, {
+                            opacity: 0.15,
+                            background: `radial-gradient(circle at ${glareX}% ${glareY}%, rgba(255,255,255,0.4) 0%, transparent 60%)`,
+                            duration: 0.3,
+                        })
+                    }
+
+                    // Text content subtle shift for extra depth
+                    if (textContent) {
+                        gsap.to(textContent, {
+                            x: clampedX * 5,
+                            y: clampedY * 5,
+                            ease: 'power2.out',
+                            duration: 0.4,
+                        })
+                    }
+                }
+
+                const handleMouseEnter = () => {
+                    gsap.to(innerCard, {
+                        boxShadow: '0 25px 60px -12px rgba(0,0,0,0.35), 0 10px 25px -5px rgba(0,0,0,0.2)',
+                        duration: 0.4,
+                    })
+                }
+
+                const handleMouseLeave = () => {
+                    gsap.to(innerCard, {
+                        rotationY: 0,
+                        rotationX: 0,
+                        z: 0,
+                        boxShadow: '0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1)',
+                        ease: 'elastic.out(1, 0.4)',
+                        duration: 1.2,
+                    })
+                    if (img) {
+                        gsap.to(img, {
+                            x: 0,
+                            y: 0,
+                            scale: 1.05,
+                            ease: 'elastic.out(1, 0.5)',
+                            duration: 1.2,
+                        })
+                    }
+                    if (glare) {
+                        gsap.to(glare, { opacity: 0, duration: 0.5 })
+                    }
+                    if (textContent) {
+                        gsap.to(textContent, { x: 0, y: 0, ease: 'power3.out', duration: 0.6 })
+                    }
+                }
+
+                cardWrap.addEventListener('mousemove', handleMouseMove)
+                cardWrap.addEventListener('mouseenter', handleMouseEnter)
+                cardWrap.addEventListener('mouseleave', handleMouseLeave)
+
+                cardWrap._onMouseMove = handleMouseMove
+                cardWrap._onMouseEnter = handleMouseEnter
+                cardWrap._onMouseLeave = handleMouseLeave
+            })
         }, sectionRef)
 
-        return () => ctx.revert()
+        return () => {
+            cardsRef.current.forEach(cardWrap => {
+                if (cardWrap && cardWrap._onMouseMove) {
+                    cardWrap.removeEventListener('mousemove', cardWrap._onMouseMove)
+                    cardWrap.removeEventListener('mouseenter', cardWrap._onMouseEnter)
+                    cardWrap.removeEventListener('mouseleave', cardWrap._onMouseLeave)
+                }
+            })
+            ctx.revert()
+        }
     }, [])
 
     return (
@@ -105,15 +228,25 @@ export default function CatalogSection({ cars, onCarSelect }) {
                             ref={(el) => (cardsRef.current[index] = el)}
                             onClick={() => onCarSelect(car)}
                             className="group cursor-pointer flex-shrink-0 w-full lg:w-[480px] opacity-0"
+                            style={{ perspective: '800px' }}
                         >
-                            {/* Card */}
-                            <div className="bg-surface rounded-2xl overflow-hidden shadow-card hover:shadow-card-hover transition-shadow duration-500">
-                                {/* Image */}
-                                <div className="relative aspect-[4/3] overflow-hidden">
+                            {/* Card with 3D transform */}
+                            <div
+                                className="tilt-card relative bg-surface rounded-2xl overflow-hidden transition-shadow duration-500 will-change-transform"
+                                style={{ transformStyle: 'preserve-3d' }}
+                            >
+                                {/* Glare overlay */}
+                                <div
+                                    className="tilt-glare absolute inset-0 z-10 pointer-events-none rounded-2xl opacity-0"
+                                    style={{ transformStyle: 'preserve-3d' }}
+                                />
+
+                                {/* Image with parallax */}
+                                <div className="relative aspect-[4/3] overflow-hidden pointer-events-none">
                                     <img
                                         src={car.heroImage}
                                         alt={`${car.brand} ${car.model}`}
-                                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                                        className="tilt-img w-full h-full object-cover scale-105 will-change-transform"
                                         loading="lazy"
                                     />
                                     {/* Hover overlay */}
@@ -139,8 +272,8 @@ export default function CatalogSection({ cars, onCarSelect }) {
                                     </div>
                                 </div>
 
-                                {/* Info */}
-                                <div className="p-6">
+                                {/* Info — with tilt-content for depth shift */}
+                                <div className="tilt-content p-6" style={{ transformStyle: 'preserve-3d' }}>
                                     <h3 className="font-unbounded text-text-primary text-xl md:text-2xl font-semibold mb-1">
                                         {car.brand} {car.model}
                                     </h3>
