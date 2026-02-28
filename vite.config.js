@@ -3,5 +3,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
     plugins: [react()],
-    base: '/AUTO-2/',
+    base: process.env.GITHUB_PAGES ? '/AUTO-2/' : '/',
 })

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://gor325678.github.io/AUTO-2/sitemap.xml
+Sitemap: https://prestigeauto.vercel.app/sitemap.xml
