@@ -270,7 +270,7 @@ export default function CarModal({ car, onClose }) {
 
                             <Magnetic>
                                 <a
-                                    href="tel:+70000000000"
+                                    href="tel:+79636740329"
                                     className="inline-flex items-center gap-2 font-unbounded text-xs tracking-[0.1em] uppercase bg-accent text-white px-8 py-4 rounded-full hover:bg-accent-hover transition-colors duration-300 flex-shrink-0"
                                     aria-label="Позвонить по поводу этого автомобиля"
                                     rel="nofollow"
@@ -322,7 +322,7 @@ export default function CarModal({ car, onClose }) {
                             <div className="flex flex-col sm:flex-row items-center gap-4">
                                 <Magnetic>
                                     <a
-                                        href="tel:+70000000000"
+                                        href="tel:+79636740329"
                                         className="w-full sm:w-auto inline-flex items-center justify-center gap-3 font-unbounded text-sm tracking-[0.1em] uppercase bg-accent text-white px-10 py-5 rounded-full hover:bg-accent-hover transition-colors duration-300"
                                         aria-label="Позвонить Борису по поводу автомобиля"
                                         rel="nofollow"
@@ -336,7 +336,7 @@ export default function CarModal({ car, onClose }) {
 
                                 <Magnetic>
                                     <a
-                                        href="https://t.me/Boris_christmas"
+                                        href="https://t.me/carsfortheelite"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="w-full sm:w-auto inline-flex items-center justify-center gap-3 font-unbounded text-sm tracking-[0.1em] uppercase bg-transparent text-text-primary border border-text-primary/20 px-10 py-5 rounded-full hover:bg-text-primary hover:text-white transition-all duration-300"

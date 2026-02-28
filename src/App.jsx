@@ -11,6 +11,7 @@ import AboutSection from './components/AboutSection'
 import ReviewsSection from './components/ReviewsSection'
 import Footer from './components/Footer'
 import CarModal from './components/CarModal'
+import DeliverySection from './components/DeliverySection'
 import Cursor from './components/Cursor'
 import ScrollProgress from './components/ScrollProgress'
 import Marquee from './components/Marquee'
@@ -82,6 +83,7 @@ function App() {
                 <main role="main" aria-label="Основное содержимое сайта Prestige Auto Moscow">
                     <HeroSection car={carsData[0]} loading={loading} />
                     <CatalogSection cars={carsData} onCarSelect={handleCarSelect} />
+                    <DeliverySection />
                     <Marquee
                         items={['Ferrari', 'BMW', 'Dodge', 'Jeep', 'Chevrolet', 'Ford', 'Nissan', 'Genesis', 'Prestige Auto']}
                         speed={40}

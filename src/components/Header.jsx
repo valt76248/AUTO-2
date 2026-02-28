@@ -49,7 +49,6 @@ export default function Header() {
                     Prestige<span className="font-light text-text-secondary ml-1">Auto Moscow</span>
                 </a>
 
-                {/* Nav — desktop */}
                 <nav className="hidden md:flex items-center gap-8" aria-label="Основная навигация">
                     <a
                         href="#catalog"
@@ -69,12 +68,24 @@ export default function Header() {
                     >
                         Отзывы
                     </a>
+                    <a
+                        href="https://t.me/carsfortheelite"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-unbounded text-xs tracking-[0.15em] uppercase text-blue-500 hover:text-blue-400 transition-colors duration-300 flex items-center gap-2"
+                    >
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <path d="m22 2-7 20-4-9-9-4Z" />
+                            <path d="M22 2 11 13" />
+                        </svg>
+                        Telegram
+                    </a>
                 </nav>
 
                 {/* CTA */}
                 <Magnetic>
                     <a
-                        href="tel:+70000000000"
+                        href="tel:+79636740329"
                         className="font-unbounded text-xs tracking-[0.1em] uppercase bg-accent text-white px-6 py-3 rounded-full hover:bg-accent-hover transition-colors duration-300"
                         aria-label="Позвонить в Prestige Auto Moscow"
                         rel="nofollow"

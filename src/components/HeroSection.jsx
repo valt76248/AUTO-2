@@ -166,7 +166,7 @@ export default function HeroSection({ car, loading }) {
                     <div ref={ctaRef} className="flex items-center gap-4 opacity-0">
                         <Magnetic>
                             <a
-                                href="tel:+70000000000"
+                                href="tel:+79636740329"
                                 className="font-unbounded text-xs tracking-[0.1em] uppercase bg-white text-black px-8 py-4 rounded-full hover:bg-white/90 transition-all duration-300 inline-flex items-center gap-3"
                                 aria-label="Позвонить в Prestige Auto Moscow"
                                 rel="nofollow"
