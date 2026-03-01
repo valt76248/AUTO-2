@@ -3,6 +3,8 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import AnimatedText from './AnimatedText'
 import Magnetic from './Magnetic'
+import FloatingParticles from './FloatingParticles'
+import LensFlare from './LensFlare'
 
 export default function HeroSection({ car, loading }) {
     const sectionRef = useRef(null)
@@ -119,6 +121,10 @@ export default function HeroSection({ car, loading }) {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-black/40" />
                 </div>
             </div>
+
+            {/* WOW Effects */}
+            <FloatingParticles count={50} />
+            <LensFlare delay={2.5} interval={10} />
 
             {/* Content */}
             <div className="relative z-10 h-full flex flex-col justify-end pb-16 md:pb-24 px-6 md:px-12">
