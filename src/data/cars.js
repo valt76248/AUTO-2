@@ -725,6 +725,91 @@ const carsData = [
 
 Комплектация Sport предлагает всё необходимое для комфортных приключений. Один владелец по электронному ПТС, бережная эксплуатация и отсутствие ДТП делают это предложение одним из лучших на рынке. Съемная крыша и двери позволяют за считанные минуты превратить закрытый пикап в настоящий кабриолет для экспедиций. Чистая история и полная готовность к новым маршрутам.`
     },
+    {
+        id: "chevrolet-camaro-2019",
+        brand: "Chevrolet",
+        model: "Camaro",
+        year: 2019,
+        mileage: "57 000",
+        tagline: "Стильный американский кабриолет. 275 л.с. Идеальное состояние.",
+        shortSpecs: "2.0 Turbo • 275 л.с. • Автомат • Задний",
+        color: "Красный",
+        body: "Кабриолет",
+        country: "США",
+        condition: "Не битый",
+        accidents: false,
+        ownerCount: "1 владелец",
+        heroImage: "images/chevrolet-camaro-2019/1.jpg",
+        photos: [
+            "images/chevrolet-camaro-2019/1.jpg",
+        ],
+        specs: {
+            engine: {
+                type: "Бензиновый",
+                displacement: "2 000 см³",
+                power: "275 л.с.",
+            },
+            transmission: {
+                gearbox: "Автомат",
+                drive: "Задний",
+            },
+            performance: {},
+            dimensions: {},
+            chassis: {},
+        },
+        description: `Chevrolet Camaro VI рестайлинг (2018—2025)
+Характеристики:
+- Год выпуска: 2019
+- Пробег: 57 000 км
+- ПТС: оригинал (1 владелец)
+- Модификация: 2.0 AT (275 л.с.)
+- Тип кузова: кабриолет
+- Цвет: красный
+- Состояние: не битый, левый руль.
+Базовая комплектация. Отличный выбор для любителей ярких поездок с открытым верхом.`
+    },
+    {
+        id: "tesla-model-3-2021",
+        brand: "Tesla",
+        model: "Model 3 Long Range AWD",
+        year: 2021,
+        mileage: "21 000",
+        tagline: "Электрическая мощь и инновации. Long Range AWD. Состояние нового.",
+        shortSpecs: "Электро • Long Range • Автомат • Полный",
+        color: "Чёрный",
+        body: "Седан",
+        country: "США",
+        condition: "Не битый",
+        accidents: false,
+        ownerCount: "1 владелец",
+        heroImage: "images/tesla-model-3-2021/1.jpg",
+        photos: [
+            "images/tesla-model-3-2021/1.jpg",
+        ],
+        specs: {
+            engine: {
+                type: "Электро",
+                power: "Long Range AWD",
+            },
+            transmission: {
+                gearbox: "Автомат",
+                drive: "Полный",
+            },
+            performance: {},
+            dimensions: {},
+            chassis: {},
+        },
+        description: `Tesla Model 3 I (2017—2023)
+Характеристики:
+- Год выпуска: 2021
+- Пробег: 21 000 км
+- ПТС: электронный (1 владелец)
+- Модификация: Long Range AWD
+- Тип кузова: седан
+- Цвет: чёрный
+- Состояние: не битый, левый руль.
+Базовая комплектация. Передовые технологии и впечатляющая динамика полного привода Tesla.`
+    },
 ];
 
 export default carsData;
