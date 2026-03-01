@@ -119,10 +119,10 @@ export default function AboutSection() {
                             {/* Realistic Dealership Image & Mobile Badge Wrappper */}
                             <div className="relative w-full mt-2 lg:mt-0 z-0">
                                 {/* The Image with overflow-hidden */}
-                                <div className="relative w-full aspect-[21/9] md:aspect-[16/9] rounded-2xl overflow-hidden shadow-xl group">
+                                <div className="relative w-full aspect-[4/3] md:aspect-[3/2] rounded-2xl overflow-hidden shadow-xl group">
                                     <img
-                                        src="/images/premium_showroom.png"
-                                        alt="Шоурум премиальных автомобилей Prestige Auto Moscow"
+                                        src="/images/white_suv_showroom.png"
+                                        alt="Большой современный белый внедорожник в шоуруме"
                                         className="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-[1.5s] ease-out"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-60" />
