@@ -736,37 +736,58 @@ const carsData = [
         color: "Красный",
         body: "Кабриолет",
         country: "США",
-        condition: "Не битый",
+        condition: "Не требует ремонта",
         accidents: false,
         ownerCount: "1 владелец",
         heroImage: "images/chevrolet-camaro-2019/1.jpg",
         photos: [
             "images/chevrolet-camaro-2019/1.jpg",
+            "images/chevrolet-camaro-2019/2.jpg",
+            "images/chevrolet-camaro-2019/3.jpg",
+            "images/chevrolet-camaro-2019/4.jpg",
+            "images/chevrolet-camaro-2019/5.jpg",
+            "images/chevrolet-camaro-2019/6.jpg",
+            "images/chevrolet-camaro-2019/7.jpg",
+            "images/chevrolet-camaro-2019/8.jpg",
+            "images/chevrolet-camaro-2019/9.jpg",
+            "images/chevrolet-camaro-2019/10.jpg"
         ],
         specs: {
             engine: {
                 type: "Бензиновый",
-                displacement: "2 000 см³",
+                displacement: "1 998 см³",
                 power: "275 л.с.",
+                turbo: "Турбонаддув",
             },
             transmission: {
                 gearbox: "Автомат",
                 drive: "Задний",
             },
-            performance: {},
-            dimensions: {},
-            chassis: {},
+            performance: {
+                acceleration: "5.9 с",
+                topSpeed: "240 км/ч",
+                fuelType: "АИ-95",
+            },
+            dimensions: {
+                length: "4 784 мм",
+                width: "1 897 мм",
+                height: "1 340 мм",
+            },
+            chassis: {
+                frontBrakes: "Дисковые вентилируемые",
+                rearBrakes: "Дисковые вентилируемые",
+            },
         },
-        description: `Chevrolet Camaro VI рестайлинг (2018—2025)
-Характеристики:
+        description: `Chevrolet Camaro VI рестайлинг (2018—2025) в кузове кабриолет. 
+Яркий красный цвет подчеркивает спортивный характер легендарного американского pony-car. 
+
+Основные характеристики:
 - Год выпуска: 2019
-- Пробег: 57 000 км
-- ПТС: оригинал (1 владелец)
-- Модификация: 2.0 AT (275 л.с.)
-- Тип кузова: кабриолет
-- Цвет: красный
-- Состояние: не битый, левый руль.
-Базовая комплектация. Отличный выбор для любителей ярких поездок с открытым верхом.`
+- Пробег: 57 000 км (родной пробег)
+- Владельцы: 1 по ПТС (оригинал)
+- Состояние: отличное, не битый, готов к проверкам.
+
+Оснащен тяговитым турбомотором 2.0 (275 л.с.) и классическим автоматом. Задний привод дарит истинное удовольствие от вождения. Базовая комплектация включает всё необходимое для комфортных прогулок с открытым верхом. Руль левый.`
     },
     {
         id: "tesla-model-3-2021",
@@ -779,36 +800,57 @@ const carsData = [
         color: "Чёрный",
         body: "Седан",
         country: "США",
-        condition: "Не битый",
+        condition: "Не требует ремонта",
         accidents: false,
         ownerCount: "1 владелец",
         heroImage: "images/tesla-model-3-2021/1.jpg",
         photos: [
             "images/tesla-model-3-2021/1.jpg",
+            "images/tesla-model-3-2021/2.jpg",
+            "images/tesla-model-3-2021/3.jpg",
+            "images/tesla-model-3-2021/4.jpg",
+            "images/tesla-model-3-2021/5.jpg",
+            "images/tesla-model-3-2021/6.jpg",
+            "images/tesla-model-3-2021/7.jpg",
+            "images/tesla-model-3-2021/8.jpg",
+            "images/tesla-model-3-2021/9.jpg",
+            "images/tesla-model-3-2021/10.jpg"
         ],
         specs: {
             engine: {
                 type: "Электро",
-                power: "Long Range AWD",
+                power: "441 л.с. (суммарно)",
+                powerBattery: "75 кВт⋅ч",
             },
             transmission: {
-                gearbox: "Автомат",
-                drive: "Полный",
+                gearbox: "Автомат (Редуктор)",
+                drive: "Полный (Dual Motor)",
             },
-            performance: {},
-            dimensions: {},
-            chassis: {},
+            performance: {
+                acceleration: "4.4 с",
+                topSpeed: "233 км/ч",
+                range: "580 км (WLTP)",
+            },
+            dimensions: {
+                length: "4 694 мм",
+                width: "1 849 мм",
+                height: "1 443 мм",
+            },
+            chassis: {
+                frontBrakes: "Дисковые",
+                rearBrakes: "Дисковые",
+            },
         },
-        description: `Tesla Model 3 I (2017—2023)
-Характеристики:
-- Год выпуска: 2021
-- Пробег: 21 000 км
-- ПТС: электронный (1 владелец)
-- Модификация: Long Range AWD
-- Тип кузова: седан
-- Цвет: чёрный
-- Состояние: не битый, левый руль.
-Базовая комплектация. Передовые технологии и впечатляющая динамика полного привода Tesla.`
+        description: `Tesla Model 3 в модификации Long Range Dual Motor AWD. 
+Эффектный глубокий чёрный цвет и минималистичный дизайн. 
+
+Ключевые особенности:
+- Минимальный пробег: 21 000 км
+- 1 владелец по электронному ПТС
+- Идеальное состояние: не битый, без окрасов.
+- Полный привод AWD обеспечивает уверенность на любой дороге.
+
+Tesla — это не просто электромобиль, это гаджет на колесах с потрясающей динамикой (4.4 сек до 100 км/ч) и запасом хода более 500 км. Передовые технологии безопасности, автопилот и регулярные обновления ПО. Руль левый.`
     },
 ];
 
