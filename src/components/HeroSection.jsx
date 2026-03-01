@@ -4,7 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import AnimatedText from './AnimatedText'
 import Magnetic from './Magnetic'
 import FloatingParticles from './FloatingParticles'
-import LensFlare from './LensFlare'
+import GlitchEffect from './GlitchEffect'
 
 export default function HeroSection({ car, loading }) {
     const sectionRef = useRef(null)
@@ -124,7 +124,7 @@ export default function HeroSection({ car, loading }) {
 
             {/* WOW Effects */}
             <FloatingParticles count={50} />
-            <LensFlare delay={2.5} interval={10} />
+            <GlitchEffect delay={2.0} interval={12} />
 
             {/* Content */}
             <div className="relative z-10 h-full flex flex-col justify-end pb-16 md:pb-24 px-6 md:px-12">
