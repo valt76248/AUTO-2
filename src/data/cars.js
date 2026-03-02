@@ -407,23 +407,35 @@ const carsData = [
         specs: {
             engine: {
                 type: "Бензиновый",
-                displacement: "2 000 см³",
+                displacement: "1 998 см³",
+                cylinders: "4 (Рядный)",
+                power: "258 л.с. при 4700 об/мин",
+                torque: "400 Н·м при 1600 об/мин",
+                turbo: "Турбонаддув",
             },
             transmission: {
-                gearbox: "Автомат",
-                drive: "Полный",
+                gearbox: "8-АКПП (Steptronic)",
+                drive: "Полный (xDrive)",
             },
             performance: {
+                acceleration: "6.1 с",
+                topSpeed: "250 км/ч",
+                fuelCombined: "6.4 л/100 км",
                 fuelType: "АИ-95",
             },
             dimensions: {
-                length: "5 060 мм", // Примерная длина для G60
+                length: "5 060 мм",
                 width: "1 900 мм",
+                height: "1 515 мм",
+                wheelbase: "2 995 мм",
+                clearance: "154 мм",
+                trunk: "520 л",
             },
             chassis: {
                 frontBrakes: "М Sport дисковые вентилируемые",
                 rearBrakes: "М Sport дисковые вентилируемые",
-                frontSuspension: "М Спортивная подвеска",
+                frontSuspension: "Независимая, М Спортивная подвеска",
+                rearSuspension: "Независимая, многорычажная",
             },
         },
         description: `BMW 530i xDrive M Sport
@@ -474,16 +486,37 @@ const carsData = [
         specs: {
             engine: {
                 type: "Бензиновый",
-                displacement: "2 500 см³",
-                power: "300 л.с.",
+                displacement: "2 521 см³",
+                cylinders: "5 (Рядный)",
+                power: "300 л.с. при 5500 об/мин",
+                torque: "400 Н·м при 1950 об/мин",
+                turbo: "Турбонаддув",
             },
             transmission: {
-                gearbox: "Автомат",
-                drive: "Полный",
+                gearbox: "5-АКПП (Geartronic)",
+                drive: "Полный (AWD AWD Haldex)",
             },
-            performance: {},
-            dimensions: {},
-            chassis: {},
+            performance: {
+                acceleration: "7.5 с",
+                topSpeed: "250 км/ч",
+                fuelCity: "15.3 л/100 км",
+                fuelHighway: "8.4 л/100 км",
+                fuelCombined: "10.9 л/100 км",
+            },
+            dimensions: {
+                length: "4 606 мм",
+                width: "1 804 мм",
+                height: "1 431 мм",
+                wheelbase: "2 715 мм",
+                clearance: "130 мм",
+                trunk: "424 л",
+            },
+            chassis: {
+                frontBrakes: "Дисковые вентилируемые",
+                rearBrakes: "Дисковые вентилируемые",
+                frontSuspension: "Независимая, пружинная (McPherson)",
+                rearSuspension: "Независимая, многорычажная",
+            },
         },
         description: `Volvo S60 I рестайлинг (2004—2009)
 Комплектация - базовая, левый руль.
@@ -517,16 +550,35 @@ const carsData = [
         specs: {
             engine: {
                 type: "Бензиновый",
-                displacement: "3 600 см³",
-                power: "309 л.с.",
+                displacement: "3 604 см³",
+                cylinders: "6 (V-образный)",
+                power: "309 л.с. при 6350 об/мин",
+                torque: "363 Н·м при 4800 об/мин",
             },
             transmission: {
-                gearbox: "Автомат",
+                gearbox: "8-АКПП (TorqueFlite)",
                 drive: "Задний",
             },
-            performance: {},
-            dimensions: {},
-            chassis: {},
+            performance: {
+                acceleration: "6.8 с",
+                topSpeed: "250 км/ч",
+                fuelCity: "12.4 л/100 км",
+                fuelHighway: "7.8 л/100 км",
+                fuelCombined: "10.2 л/100 км",
+            },
+            dimensions: {
+                length: "5 027 мм",
+                width: "1 923 мм",
+                height: "1 460 мм",
+                wheelbase: "2 950 мм",
+                clearance: "130 мм",
+                trunk: "459 л",
+            },
+            chassis: {
+                frontBrakes: "Дисковые вентилируемые",
+                rearBrakes: "Дисковые",
+                wheels: "245/45 R20",
+            },
         },
         description: `Dodge Challenger 2019 года выпуска, в благородном сером цвете.
 Это не просто автомобиль — это воплощение американской мечты о свободе и мощи. Серый цвет придает образу сдержанную агрессию и элегантность: он не кричит, но заявляет о себе уверенно и со вкусом.
@@ -564,16 +616,36 @@ const carsData = [
         specs: {
             engine: {
                 type: "Бензиновый",
-                displacement: "6 200 см³",
-                power: "495 л.с.",
+                displacement: "6 162 см³",
+                cylinders: "8 (V-образный LT2)",
+                power: "495 л.с. при 6450 об/мин",
+                torque: "637 Н·м при 5150 об/мин",
             },
             transmission: {
-                gearbox: "Робот",
+                gearbox: "8-РКПП (Tremec)",
                 drive: "Задний",
             },
-            performance: {},
-            dimensions: {},
-            chassis: {},
+            performance: {
+                acceleration: "2.9 с",
+                topSpeed: "312 км/ч",
+                fuelCity: "15.7 л/100 км",
+                fuelHighway: "9.8 л/100 км",
+                fuelCombined: "12.4 л/100 км",
+            },
+            dimensions: {
+                length: "4 630 мм",
+                width: "1 933 мм",
+                height: "1 234 мм",
+                wheelbase: "2 723 мм",
+                clearance: "135 мм",
+                trunk: "357 л",
+            },
+            chassis: {
+                frontBrakes: "Дисковые вентилируемые",
+                rearBrakes: "Дисковые вентилируемые",
+                frontSuspension: "Независимая, пружинная, на двойных поперечных рычагах",
+                rearSuspension: "Независимая, пружинная, на двойных поперечных рычагах",
+            },
         },
         description: `Chevrolet Corvette C8 (2020—2025) Stingray (3LT Z51 Performance Package)
 Это не просто автомобиль — это воплощение американской мечты и инженерного триумфа. Модель, которая изменила представление о суперкарах, сохранив при этом свою легендарную душу. Бордовый цвет здесь не случайность, это дань уважения истории и заявление о вашем характере.
@@ -609,16 +681,35 @@ const carsData = [
         specs: {
             engine: {
                 type: "Бензиновый",
-                displacement: "2 300 см³",
-                power: "317 л.с.",
+                displacement: "2 261 см³",
+                cylinders: "4 (Рядный)",
+                power: "317 л.с. при 5500 об/мин",
+                torque: "432 Н·м при 3000 об/мин",
+                turbo: "Турбонаддув (EcoBoost)",
             },
             transmission: {
-                gearbox: "Автомат",
+                gearbox: "10-АКПП",
                 drive: "Задний",
             },
-            performance: {},
-            dimensions: {},
-            chassis: {},
+            performance: {
+                acceleration: "5.8 с",
+                topSpeed: "233 км/ч",
+                fuelCity: "14.1 л/100 км",
+                fuelHighway: "7.7 л/100 км",
+                fuelCombined: "10.0 л/100 км",
+            },
+            dimensions: {
+                length: "4 784 мм",
+                width: "1 916 мм",
+                height: "1 381 мм",
+                wheelbase: "2 720 мм",
+                clearance: "143 мм",
+                trunk: "332 л",
+            },
+            chassis: {
+                frontBrakes: "Дисковые вентилируемые",
+                rearBrakes: "Дисковые вентилируемые",
+            },
         },
         description: `Ford Mustang VI рестайлинг (2017—2023)
 Это не просто автомобиль — это икона свободы, воплощенная в металле. Серый цвет придает этому мускулистому купе сдержанную агрессию и элегантность: он не кричит, но говорит о вашем вкусе громче любых слов.
@@ -659,16 +750,35 @@ const carsData = [
         specs: {
             engine: {
                 type: "Бензиновый",
-                displacement: "6 400 см³",
-                power: "492 л.с.",
+                displacement: "6 424 см³",
+                cylinders: "8 (V-образный HEMI)",
+                power: "492 л.с. при 6000 об/мин",
+                torque: "644 Н·м при 4200 об/мин",
             },
             transmission: {
-                gearbox: "Автомат",
+                gearbox: "8-АКПП",
                 drive: "Задний",
             },
-            performance: {},
-            dimensions: {},
-            chassis: {},
+            performance: {
+                acceleration: "4.4 с",
+                topSpeed: "289 км/ч",
+                fuelCity: "15.7 л/100 км",
+                fuelHighway: "9.4 л/100 км",
+                fuelCombined: "13.1 л/100 км",
+            },
+            dimensions: {
+                length: "5 027 мм",
+                width: "1 923 мм",
+                height: "1 416 мм",
+                wheelbase: "2 950 мм",
+                clearance: "130 мм",
+                trunk: "459 л",
+            },
+            chassis: {
+                frontBrakes: "Дисковые вентилируемые (Brembo 6-поршневые)",
+                rearBrakes: "Дисковые вентилируемые",
+                wheels: "275/40 R20",
+            },
         },
         description: `Представляем исключительный экземпляр Dodge Challenger SRT 2021 года выпуска, в благородном светло-сером цвете. 
 
@@ -708,16 +818,34 @@ const carsData = [
         specs: {
             engine: {
                 type: "Бензиновый",
-                displacement: "3 600 см³",
-                power: "285 л.с.",
+                displacement: "3 604 см³",
+                cylinders: "6 (V-образный Pentastar)",
+                power: "285 л.с. при 6400 об/мин",
+                torque: "353 Н·м при 4400 об/мин",
             },
             transmission: {
-                gearbox: "Автомат",
-                drive: "Полный",
+                gearbox: "8-АКПП",
+                drive: "Полный (Command-Trac)",
             },
-            performance: {},
-            dimensions: {},
-            chassis: {},
+            performance: {
+                acceleration: "8.1 с",
+                topSpeed: "160 км/ч",
+                fuelCity: "13.8 л/100 км",
+                fuelHighway: "10.7 л/100 км",
+                fuelCombined: "12.4 л/100 км",
+            },
+            dimensions: {
+                length: "5 591 мм",
+                width: "1 894 мм",
+                height: "1 843 мм",
+                wheelbase: "3 487 мм",
+                clearance: "253 мм",
+            },
+            chassis: {
+                frontBrakes: "Дисковые вентилируемые",
+                rearBrakes: "Дисковые",
+                wheels: "245/75 R17",
+            },
         },
         description: `Jeep Gladiator 2022 года — это больше, чем просто пикап. Это легендарный наследник Wrangler, объединивший в себе непревзойденные внедорожные способности и практичность грузовой платформы. В эффектном синем цвете этот автомобиль притягивает взгляды как в городском потоке, так и на диком бездорожье.
 
@@ -756,26 +884,35 @@ const carsData = [
             engine: {
                 type: "Бензиновый",
                 displacement: "1 998 см³",
-                power: "275 л.с.",
+                cylinders: "4 (Рядный)",
+                power: "275 л.с. при 5600 об/мин",
+                torque: "400 Н·м при 3000 об/мин",
                 turbo: "Турбонаддув",
             },
             transmission: {
-                gearbox: "Автомат",
+                gearbox: "8-АКПП",
                 drive: "Задний",
             },
             performance: {
                 acceleration: "5.9 с",
                 topSpeed: "240 км/ч",
+                fuelCity: "11.1 л/100 км",
+                fuelHighway: "7.6 л/100 км",
+                fuelCombined: "8.1 л/100 км",
                 fuelType: "АИ-95",
             },
             dimensions: {
                 length: "4 784 мм",
                 width: "1 897 мм",
                 height: "1 340 мм",
+                wheelbase: "2 812 мм",
+                clearance: "120 мм",
+                trunk: "206 л",
             },
             chassis: {
                 frontBrakes: "Дисковые вентилируемые",
                 rearBrakes: "Дисковые вентилируемые",
+                wheels: "245/40 R20",
             },
         },
         description: `Chevrolet Camaro VI рестайлинг (2018—2025) в кузове кабриолет. 
@@ -820,6 +957,7 @@ const carsData = [
             engine: {
                 type: "Электро",
                 power: "441 л.с. (суммарно)",
+                torque: "493 Н·м",
                 powerBattery: "75 кВт⋅ч",
             },
             transmission: {
@@ -835,10 +973,14 @@ const carsData = [
                 length: "4 694 мм",
                 width: "1 849 мм",
                 height: "1 443 мм",
+                wheelbase: "2 875 мм",
+                clearance: "140 мм",
+                trunk: "425 л (сзади) + 88 л (спереди)",
             },
             chassis: {
-                frontBrakes: "Дисковые",
-                rearBrakes: "Дисковые",
+                frontBrakes: "Дисковые вентилируемые",
+                rearBrakes: "Дисковые вентилируемые",
+                wheels: "235/45 R18",
             },
         },
         description: `Tesla Model 3 в модификации Long Range Dual Motor AWD. 
