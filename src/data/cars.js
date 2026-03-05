@@ -994,6 +994,153 @@ const carsData = [
 
 Tesla — это не просто электромобиль, это гаджет на колесах с потрясающей динамикой (4.4 сек до 100 км/ч) и запасом хода более 500 км. Передовые технологии безопасности, автопилот и регулярные обновления ПО. Руль левый.`
     },
+    {
+        id: "tesla-model-3-red-2021",
+        brand: "Tesla",
+        model: "Model 3 Long Range AWD",
+        year: 2021,
+        mileage: "34 000",
+        tagline: "Яркий красный электрокар. Электронный ПТС, отличное состояние.",
+        shortSpecs: "Электро • Long Range • Автомат • Полный",
+        color: "Красный",
+        body: "Седан",
+        country: "США",
+        condition: "Не битый",
+        accidents: false,
+        ownerCount: "2 владельца",
+        heroImage: "images/tesla-model-3-red-2021/1.jpg",
+        photos: [
+            "images/tesla-model-3-red-2021/1.jpg"
+        ],
+        specs: {
+            engine: {
+                type: "Электро",
+                power: "441 л.с. (суммарно)",
+                torque: "493 Н·м",
+                powerBattery: "75 кВт⋅ч",
+            },
+            transmission: {
+                gearbox: "Автомат (Редуктор)",
+                drive: "Полный (Dual Motor)",
+            },
+            performance: {
+                acceleration: "4.4 с",
+                topSpeed: "233 км/ч",
+                range: "580 км (WLTP)",
+            },
+            dimensions: {
+                length: "4 694 мм",
+                width: "1 849 мм",
+                height: "1 443 мм",
+                wheelbase: "2 875 мм",
+                clearance: "140 мм",
+            },
+            chassis: {
+                wheels: "235/45 R18",
+            },
+        },
+        description: `Tesla Model 3 2021 года выпуска, в ярком красном исполнении.
+Поколение I (2017—2023). Модификация Long Range AWD.
+ПТС - электронный, комплектация - базовая, руль левый.`
+    },
+    {
+        id: "infiniti-q50-2016",
+        brand: "Infiniti",
+        model: "Q50 Sport + NAVI",
+        year: 2016,
+        mileage: "93 900",
+        tagline: "Спортивный седан на 405 л.с. Оригинальный ПТС, один владелец.",
+        shortSpecs: "3.0 Бензин • 405 л.с. • Автомат • Полный",
+        color: "Серый",
+        body: "Седан",
+        country: "Япония",
+        condition: "Не битый",
+        accidents: false,
+        ownerCount: "1 владелец",
+        heroImage: "images/infiniti-q50-2016/1.jpg",
+        photos: [
+            "images/infiniti-q50-2016/1.jpg"
+        ],
+        specs: {
+            engine: {
+                type: "Бензиновый",
+                displacement: "2 997 см³",
+                cylinders: "6 (V-образный Twin-Turbo)",
+                power: "405 л.с. при 6400 об/мин",
+                torque: "475 Н·м при 1600–5200 об/мин",
+            },
+            transmission: {
+                gearbox: "7-АКПП",
+                drive: "Полный",
+            },
+            performance: {
+                acceleration: "5.4 с",
+                topSpeed: "250 км/ч",
+                fuelCombined: "9.3 л/100 км",
+            },
+            dimensions: {
+                length: "4 800 мм",
+                width: "1 820 мм",
+                height: "1 455 мм",
+                wheelbase: "2 850 мм",
+                clearance: "135 мм",
+            },
+            chassis: {
+                frontBrakes: "Дисковые вентилируемые",
+                rearBrakes: "Дисковые вентилируемые",
+                wheels: "245/40 R19",
+            },
+        },
+        description: `Infiniti Q50 2016 года выпуска, Серый цвет.
+Поколение I (2013—2017). Модификация 3.0 4WD AT (405 л.с.).
+Оригинальный ПТС, один владелец. Комплектация Sport + NAVI. Руль левый.`
+    },
+    {
+        id: "sea-doo-switch-2022",
+        brand: "BRP",
+        model: "Sea-Doo Switch Cruise 21",
+        year: 2022,
+        mileage: "Б/У",
+        tagline: "Технологичный тримаран и конструктор для вашего отдыха.",
+        shortSpecs: "Водомёт Rotax 1630 • 230 л.с. • 9-11 мест",
+        color: "Не указан",
+        body: "Катер",
+        country: "Канада",
+        condition: "Б/У",
+        accidents: false,
+        ownerCount: "-",
+        heroImage: "images/sea-doo-switch-2022/1.jpg",
+        photos: [
+            "images/sea-doo-switch-2022/1.jpg"
+        ],
+        specs: {
+            engine: {
+                type: "Водомёт (Rotax 1630)",
+                power: "230 л.с.",
+            },
+            transmission: {
+            },
+            performance: {
+            },
+            dimensions: {
+                length: "6.5 м",
+                width: "2.4 м",
+                clearance: "Осадка 0.6 м",
+            },
+            chassis: {
+                material: "стеклопластик",
+            },
+        },
+        description: `В продаже технологичный тримаран Sea-Doo Switch Cruise 21, модель 2022 года.
+
+Это не просто понтон, а конструктор для вашего отдыха. Уникальная система модулей позволяет менять конфигурацию салона за считанные минуты: сегодня это просторная зона для загара, завтра — уютная гостиная для ужина на воде, а послезавтра — открытая площадка для вечеринки. 
+Вместимость подтверждена делом: хотя в документах указано 9 мест, эргономика корпуса позволяет с комфортом разместить до 11 человек. Это значит, что в следующее путешествие сможет отправиться вся большая компания без исключений. 
+За динамику отвечает надежный водомёт Rotax 1630 мощностью 230 л.с. Он гарантирует уверенный ход и безопасность для тех, кто решит искупаться рядом с бортом. Катер в отличном состоянии, полностью готов к сезону и новым впечатлениям.
+
+Прицеп в комплекте.
+
+Свяжитесь с нами: @Boris_christmas`
+    }
 ];
 
 export default carsData;
