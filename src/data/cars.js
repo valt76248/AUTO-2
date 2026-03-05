@@ -1010,7 +1010,16 @@ Tesla — это не просто электромобиль, это гадже
         ownerCount: "2 владельца",
         heroImage: "images/tesla-model-3-red-2021/1.jpg",
         photos: [
-            "images/tesla-model-3-red-2021/1.jpg"
+            "images/tesla-model-3-red-2021/1.jpg",
+            "images/tesla-model-3-red-2021/2.jpg",
+            "images/tesla-model-3-red-2021/3.jpg",
+            "images/tesla-model-3-red-2021/4.jpg",
+            "images/tesla-model-3-red-2021/5.jpg",
+            "images/tesla-model-3-red-2021/6.jpg",
+            "images/tesla-model-3-red-2021/7.jpg",
+            "images/tesla-model-3-red-2021/8.jpg",
+            "images/tesla-model-3-red-2021/9.jpg",
+            "images/tesla-model-3-red-2021/10.jpg"
         ],
         specs: {
             engine: {
@@ -1059,7 +1068,16 @@ Tesla — это не просто электромобиль, это гадже
         ownerCount: "1 владелец",
         heroImage: "images/infiniti-q50-2016/1.jpg",
         photos: [
-            "images/infiniti-q50-2016/1.jpg"
+            "images/infiniti-q50-2016/1.jpg",
+            "images/infiniti-q50-2016/2.jpg",
+            "images/infiniti-q50-2016/3.jpg",
+            "images/infiniti-q50-2016/4.jpg",
+            "images/infiniti-q50-2016/5.jpg",
+            "images/infiniti-q50-2016/6.jpg",
+            "images/infiniti-q50-2016/7.jpg",
+            "images/infiniti-q50-2016/8.jpg",
+            "images/infiniti-q50-2016/9.jpg",
+            "images/infiniti-q50-2016/10.jpg"
         ],
         specs: {
             engine: {
@@ -1111,7 +1129,14 @@ Tesla — это не просто электромобиль, это гадже
         ownerCount: "-",
         heroImage: "images/sea-doo-switch-2022/1.jpg",
         photos: [
-            "images/sea-doo-switch-2022/1.jpg"
+            "images/sea-doo-switch-2022/1.jpg",
+            "images/sea-doo-switch-2022/2.jpg",
+            "images/sea-doo-switch-2022/3.jpg",
+            "images/sea-doo-switch-2022/4.jpg",
+            "images/sea-doo-switch-2022/5.jpg",
+            "images/sea-doo-switch-2022/6.jpg",
+            "images/sea-doo-switch-2022/7.jpg",
+            "images/sea-doo-switch-2022/8.jpg"
         ],
         specs: {
             engine: {
