@@ -80,7 +80,7 @@ function App() {
 
             <div className={`${loading ? 'opacity-0' : 'opacity-100'} transition-opacity duration-300`}>
                 <Header />
-                <main role="main" aria-label="Основное содержимое сайта Prestige Auto Moscow">
+                <main role="main" aria-label="Основное содержимое сайта Prestige Auto">
                     <HeroSection car={carsData[0]} loading={loading} />
                     <CatalogSection cars={carsData} onCarSelect={handleCarSelect} />
                     <DeliverySection />

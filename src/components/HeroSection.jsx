@@ -113,7 +113,7 @@ export default function HeroSection({ car, loading }) {
                     <img
                         ref={imageRef}
                         src={car.heroImage}
-                        alt={`Купить ${car.brand} ${car.model} ${car.year} в Москве — Prestige Auto Moscow`}
+                        alt={`Купить ${car.brand} ${car.model} ${car.year} в Москве — Prestige Auto`}
                         className="w-full h-full object-cover opacity-0 scale-110"
                         loading="eager"
                     />
@@ -174,7 +174,7 @@ export default function HeroSection({ car, loading }) {
                             <a
                                 href="tel:+79636740329"
                                 className="font-unbounded text-xs tracking-[0.1em] uppercase bg-white text-black px-8 py-4 rounded-full hover:bg-white/90 transition-all duration-300 inline-flex items-center gap-3"
-                                aria-label="Позвонить в Prestige Auto Moscow"
+                                aria-label="Позвонить в Prestige Auto"
                                 rel="nofollow"
                             >
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

@@ -94,7 +94,7 @@ export default function AboutSection() {
             ref={sectionRef}
             id="about"
             className="relative bg-surface py-24 md:py-32"
-            aria-label="О компании Prestige Auto Moscow"
+            aria-label="О компании Prestige Auto"
         >
             {/* Divider */}
             <div className="section-divider max-w-7xl mx-auto mb-24 md:mb-32" />
@@ -107,7 +107,7 @@ export default function AboutSection() {
                                 О продавце
                             </p>
                             <h2 className="font-unbounded text-text-primary text-3xl md:text-4xl font-semibold mb-6">
-                                Prestige Auto Moscow
+                                Prestige Auto
                             </h2>
                             <p className="font-unbounded text-text-secondary text-base md:text-xl font-light leading-relaxed max-w-4xl text-justify mb-6 lg:mb-12 relative z-10">
                                 Профессиональный дилер с многолетним опытом на рынке премиальных и коллекционных
@@ -145,7 +145,7 @@ export default function AboutSection() {
                                             <path id="textCircleUnified" d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0" fill="transparent" />
                                             <text className="font-unbounded text-[8.2px] tracking-[0.14em] uppercase font-medium" fill="currentColor">
                                                 <textPath href="#textCircleUnified" startOffset="0%">
-                                                    PRESTIGE AUTO MOSCOW • PREMIUM SELECTION •
+                                                    PRESTIGE AUTO • PREMIUM SELECTION •
                                                 </textPath>
                                             </text>
                                         </svg>

@@ -33,7 +33,7 @@ export default function Footer() {
             ref={footerRef}
             className="relative bg-[#0A0A0A] text-white py-20 md:py-28"
             role="contentinfo"
-            aria-label="Контактная информация Prestige Auto Moscow"
+            aria-label="Контактная информация Prestige Auto"
         >
             <div ref={contentRef} className="px-6 md:px-12 opacity-0">
                 <div className="max-w-7xl mx-auto text-center">
@@ -53,7 +53,7 @@ export default function Footer() {
                             <a
                                 href="tel:+79636740329"
                                 className="w-full sm:w-auto inline-flex items-center justify-center gap-3 font-unbounded text-sm tracking-[0.1em] uppercase bg-white text-black px-10 py-5 rounded-full hover:bg-white/90 transition-all duration-300"
-                                aria-label="Позвонить в Prestige Auto Moscow"
+                                aria-label="Позвонить в Prestige Auto"
                                 rel="nofollow"
                             >
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -82,7 +82,7 @@ export default function Footer() {
                     {/* Bottom bar */}
                     <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
                         <p className="font-unbounded text-white/30 text-[10px] tracking-[0.15em]">
-                            © 2026 Prestige Auto Moscow.
+                            © 2026 Prestige Auto.
                         </p>
                         <p className="font-unbounded text-white/20 text-[10px] tracking-[0.1em]">
                             PRO-дилер · Рейтинг 5.0 ★ · 13 отзывов

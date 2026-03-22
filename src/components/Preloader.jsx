@@ -50,7 +50,7 @@ export default function Preloader({ onComplete, loading }) {
             style={{ clipPath: 'inset(0 0 0% 0)' }}
         >
             <h2 className="font-unbounded text-white/40 text-xs tracking-[0.3em] uppercase mb-8">
-                Prestige Auto Moscow
+                Prestige Auto
             </h2>
             <div className="w-48 h-[1px] bg-white/10 mb-6 overflow-hidden">
                 <div
