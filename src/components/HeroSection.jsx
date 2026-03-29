@@ -113,7 +113,7 @@ export default function HeroSection({ car, loading }) {
                     <img
                         ref={imageRef}
                         src={car.heroImage}
-                        alt={`Купить ${car.brand} ${car.model} ${car.year} в Москве — Prestige Auto`}
+                        alt={`Купить ${car.brand} ${car.model} ${car.year} — Prestige Auto`}
                         className="w-full h-full object-cover opacity-0 scale-110"
                         loading="eager"
                     />

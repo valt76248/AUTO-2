@@ -246,7 +246,7 @@ export default function CatalogSection({ cars, onCarSelect }) {
                                 <div className="relative aspect-[4/3] overflow-hidden pointer-events-none">
                                     <img
                                         src={car.heroImage}
-                                        alt={`Купить ${car.brand} ${car.model} ${car.year} в Москве — фото`}
+                                        alt={`Купить ${car.brand} ${car.model} ${car.year} — фото`}
                                         className="tilt-img w-full h-full object-cover scale-105 will-change-transform"
                                         loading="lazy"
                                     />
